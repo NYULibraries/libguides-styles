@@ -1,0 +1,26 @@
+{
+  "name": "libguides-styles",
+  "description": "Custom JS/CSS for NYU Libguides",
+  "scripts": {
+    "build": "webpack",
+    "build:dev": "NODE_ENV=${NODE_ENV:-development} yarn run build --mode=development",
+    "build:prod": "NODE_ENV=${NODE_ENV:-production} yarn run build --mode=production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.6.2",
+    "css-loader": "^3.4.1",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "engines": {
+    "node": "13"
+  }
+}

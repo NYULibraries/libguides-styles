@@ -1,2 +1,2 @@
-# Libguides Styles and Templates
+# Libguides Styles
 
