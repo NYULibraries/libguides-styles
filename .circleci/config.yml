@@ -30,7 +30,7 @@ webpack_copy: &webpack_copy
   run:
     name: Copy webpack build
     command: |
-      docker cp $(docker ps -a -q --filter name=build):~/app/dist/ .
+      docker cp $(docker ps -a -q --filter name=build):/app/dist/ .
 
 version: 2.1
 orbs:
