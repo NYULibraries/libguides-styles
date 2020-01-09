@@ -7,8 +7,8 @@ module.exports = {
   context: path.resolve(__dirname),
   entry: {
     app: [
-      './index.js',
-      './index.scss',
+      './js/index.js',
+      './scss/index.scss',
     ]
   },
   output: {
