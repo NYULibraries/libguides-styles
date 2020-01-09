@@ -16,7 +16,7 @@ s3_deploy: &s3_deploy
     to: '${S3_URI}/libguides'
     arguments: |
       --exclude "*" \
-      --include "--include "~/app/dist/*" \
+      --include "--include "~/app/dist" \
       --delete
     overwrite: true
 
@@ -28,9 +28,9 @@ webpack_build: &webpack_build
 
 webpack_copy: &webpack_copy
   run:
-    name: Copies webpack output
+    name: Copy webpack build
     command: |
-      docker cp $(docker ps -a -q --filter name=build):/app/dist/ .
+      docker cp $(docker ps -a -q --filter name=build):~/app/dist/ .
 
 version: 2.1
 orbs:
@@ -49,8 +49,8 @@ jobs:
       - *webpack_build
       - *webpack_copy
       - *s3_deploy
-      # - store_artifacts:
-      #     path: dist
+      - store_artifacts:
+          path: dist
     
   deploy-prod:
     <<: *docker-defaults
@@ -61,12 +61,12 @@ jobs:
           name: Export Dev environment
           command: |
             echo 'export NODE_ENV=production' >> $BASH_ENV
-      # - *aws_env
-      # - *webpack_build
-      # - *webpack_copy
-      # - *s3_deploy
-      # - store_artifacts:
-      #     path: dist
+      - *aws_env
+      - *webpack_build
+      - *webpack_copy
+      - *s3_deploy
+      - store_artifacts:
+          path: dist
 
 workflows:
   version: 2.1
