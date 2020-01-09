@@ -16,7 +16,7 @@ s3_deploy: &s3_deploy
     to: '${S3_URI}/libguides'
     arguments: |
       --exclude "*" \
-      --include "~/app/dist" \
+      --include "./dist/*" \
       --delete
     overwrite: true
 
