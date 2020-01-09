@@ -15,8 +15,6 @@ s3_deploy: &s3_deploy
     from: dist
     to: '${S3_URI}/libguides'
     arguments: |
-      --exclude "*" \
-      --include "./dist/*" \
       --delete
     overwrite: true
 
