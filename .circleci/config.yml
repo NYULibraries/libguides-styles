@@ -42,15 +42,15 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-        name: Export Dev environment
-        command: |
-          echo 'export NODE_ENV=development >> $BASH_ENV
-      - *aws_env
-      - *webpack_build
-      - *webpack_copy
-      - *s3_deploy
-      - store_artifacts:
-          path: dist
+          name: Export Dev environment
+          command: |
+            echo 'export NODE_ENV=development >> $BASH_ENV
+      # - *aws_env
+      # - *webpack_build
+      # - *webpack_copy
+      # - *s3_deploy
+      # - store_artifacts:
+      #     path: dist
     
   deploy-prod:
     <<: *docker-defaults
@@ -58,15 +58,15 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-        name: Export Dev environment
-        command: |
-          echo 'export NODE_ENV=production >> $BASH_ENV
-      - *aws_env
-      - *webpack_build
-      - *webpack_copy
-      - *s3_deploy
-      - store_artifacts:
-          path: dist
+          name: Export Dev environment
+          command: |
+            echo 'export NODE_ENV=production >> $BASH_ENV
+      # - *aws_env
+      # - *webpack_build
+      # - *webpack_copy
+      # - *s3_deploy
+      # - store_artifacts:
+      #     path: dist
 
 workflows:
   version: 2.1
