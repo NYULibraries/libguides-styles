@@ -16,3 +16,21 @@ services:
     environment:
       NODE_ENV: ${NODE_ENV:-production}
     # <<: *default-volumes
+  
+  watch:
+    build: .
+    image: libguides-styles
+    command: yarn build:dev:watch
+    <<: *default-volumes
+
+  dev:
+    build:
+      context: ./test
+      dockerfile: Dockerfile
+    image: libguides-styles-nginx
+    ports:
+      - "8080:8080"
+    depends_on:
+      - watch
+    <<: *default-volumes
+    
