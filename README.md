@@ -14,7 +14,7 @@ All custom Javascript fo Libguides start through the `js/index.js` entrypoint bu
 
 ## Layouts
 
-
+There is no way in LibGuides to host templates externally so we will just use this repository as a copy of the templating work we have to do directly in the LG interface. It is not the canonical source of truth and may become out-of-sync with the live version if not meticulously manually managed.
 
 ## Developing locally
 
