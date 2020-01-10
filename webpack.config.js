@@ -6,9 +6,9 @@ const isStaging = process.env.NODE_ENV === 'staging';
 module.exports = {
   context: path.resolve(__dirname),
   entry: {
-    app: [
-      './index.js',
-      './index.scss',
+    index: [
+      './js/index.js',
+      './scss/index.scss',
     ]
   },
   output: {
@@ -29,7 +29,7 @@ module.exports = {
 						{
 							loader: 'file-loader',
 							options: {
-								name: '[name].css',
+								name: '[name].min.css',
 							}
 						},
 						{

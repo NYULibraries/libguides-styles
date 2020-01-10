@@ -1,11 +1,18 @@
 version: '3.7'
 
+x-volumes: &default-volumes
+  volumes:
+    - ./dist:/app/dist
+    - ./js:/app/js
+    - ./scss:/app/scss
+    - ./webpack.config.js:/app/webpack.config.js
+    - ./babel.config.js:/app/babel.config.js
+
 services:
-  webpack:
+  build:
     build: .
     image: libguides-styles
     command: yarn build:prod
     environment:
       NODE_ENV: ${NODE_ENV:-production}
-    volumes:
-      - .:/app
+    # <<: *default-volumes

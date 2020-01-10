@@ -1,16 +1,18 @@
-header.header {
-	background-color: #57068C;
-}
-header h1 {
-	margin: 0;
-	padding: 39px 0;
-	display: block;
-}
-header h1 a {
-	display: block;
-}
-header > div {
-	margin: 0 auto;
+header {
+	.header {
+		background-color: #57068C;
+	}
+	h1 {
+		margin: 0;
+		padding: 39px 0;
+		display: block;
+		a {
+			display: block;
+		}
+	}
+	& > div {
+		margin: 0 auto;
+	}
 }
 
 div.s-lg-az-result-description  {

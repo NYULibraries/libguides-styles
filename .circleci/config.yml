@@ -1,0 +1,83 @@
+docker-defaults: &docker-defaults
+  docker:
+    - image: quay.io/nyulibraries/circleci_docker:18.06.1-dc-1.23.2-0
+  working_directory: ~/app
+
+aws_env: &aws_env
+  run:
+    name: Export AWS Dev env vars
+    command: |
+      echo 'export AWS_ACCESS_KEY_ID=${WEB_CDN_AWS_ACCESS_KEY_ID}' >> $BASH_ENV
+      echo 'export AWS_SECRET_ACCESS_KEY=${WEB_CDN_AWS_SECRET_ACCESS_KEY}' >> $BASH_ENV
+
+s3_deploy: &s3_deploy
+  aws-s3/sync:
+    from: dist
+    to: '${S3_URI}/libguides'
+    arguments: |
+      --delete
+    overwrite: true
+
+webpack_build: &webpack_build
+  run:
+    name: Webpack
+    command: |
+      NODE_ENV=${NODE_ENV} docker-compose run build
+
+webpack_copy: &webpack_copy
+  run:
+    name: Copy webpack build
+    command: |
+      docker cp $(docker ps -a -q --filter name=build):/app/dist/ .
+
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+jobs:
+  deploy-dev:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Export Dev environment
+          command: |
+            echo 'export NODE_ENV=development' >> $BASH_ENV
+      - *aws_env
+      - *webpack_build
+      - *webpack_copy
+      - *s3_deploy
+      - store_artifacts:
+          path: dist
+    
+  deploy-prod:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Export Dev environment
+          command: |
+            echo 'export NODE_ENV=production' >> $BASH_ENV
+      - *aws_env
+      - *webpack_build
+      - *webpack_copy
+      - *s3_deploy
+      - store_artifacts:
+          path: dist
+
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - deploy-dev:
+          context: web-cdn-aws-nyulitsdev
+          filters:
+            branches:
+              ignore:
+                - master
+      - deploy-prod:
+          context: web-cdn-aws-nyulits
+          filters:
+            branches:
+              only: master
