@@ -1,0 +1,220 @@
+<body class="s-lib-public-body">
+		{{skip_link}}
+        <!-- BEGIN: Page Header -->
+            {{public_header}}
+        <!-- END: Page Header -->
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+<P>
+            
+            <h1 id="s-lib-public-header-title">{{title}}
+</h1>
+            <div id="s-lib-public-header-desc">{{system_intro}}
+</div>
+        </div>
+        <!-- END: Content Header -->
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            {{page_nav}}       
+        </div>
+        <!-- END: Nav Bar -->
+        <!-- BEGIN: content -->
+        <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+            <div  id="s-lg-index-cols"  class="row">
+                <div  id="col1"  class="col-md-8 center">
+                    <div class="clearfix">
+                        <div id="s-lg-hp-nav"> 
+                            <style type="text/css">body {font-family: "Helvetica", sans-serif;}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e2e1dd;
+    background-color: #ffffff;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+<p>
+<b>Subjects</b>
+</p>
+<ul class="tab">
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Area &amp; Cultural Studies')">Area &amp; Cultural Studies</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Arts')">Arts</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Business')">Business</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Education')">Education</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Health')">Health</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'History')">History</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Humanities')">Humanities</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Language &amp; Linguistics')">Language &amp; Linguistics</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Media, Communication &amp; Journalism')">Media, Communication &amp; Journalism</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Science &amp; Engineering')">Science &amp; Engineering</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Social Sciences')">Social Sciences</a></li>
+	<li><a class="tablinks" href="#" onclick="openCity(event, 'Special Collections')">Special Collections</a></li>
+</ul>
+
+<div class="tabcontent" id="Area &amp; Cultural Studies">
+<h3>Area &amp; Cultural Studies</h3>
+
+<p><script>
+springshare_widget_config_1467207938614 = { path: 'guides' };
+</script></p>
+
+<div id="s-lg-widget-1467207938614">&nbsp;</div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=873&widget_type=1&search_terms=&search_match=2&sort_by=name&list_format=1&drop_text=Select+a+Guide...&output_format=1&load_type=2&enable_description=0&enable_group_search_limit=0&enable_subject_search_limit=0&guide_types%5B0%5D=3&subject_ids%5B0%5D=56180&widget_title=Guide+List&widget_height=250&widget_width=100%25&widget_link_color=2954d1&widget_embed_type=1&num_results=0&enable_more_results=1&window_target=2&config_id=1467207938614";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1467207938614");</script>
+
+<p>&nbsp;</p>
+</div>
+
+<div class="tabcontent" id="Arts">
+<h3>Arts</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Education">
+<h3>Education</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Health">
+<h3>Health</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="History">
+<h3>History</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Humanities">
+<h3>Humanities</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Language &amp; Linguistics">
+<h3>Language &amp; Linguistics</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Media, Communication &amp; Journalism">
+<h3>Media, Communication &amp; Journalism</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Science &amp; Engineering">
+<h3>Science &amp; Engineering</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Social Sciences">
+<h3>Social Sciences</h3>
+
+<p>guides go here.</p>
+</div>
+
+<div class="tabcontent" id="Special Collections">
+<h3>Special Collections</h3>
+
+<p>guides go here.</p>
+</div>
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<p>&nbsp;</p>
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div  id="col2"  class="col-md-4 center">
+                    {{content_boxes}}
+                </div>
+            </div>
+        </div>
+        <!-- END: content -->
+        <!-- BEGIN: Page Footer -->
+        {{system_footer}}
+        <!-- END: Page Footer -->
+        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <div id="s-lib-popover-title" class="hide">
+                    <span class="text-info"><strong>title</strong></span> 
+                    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button> 
+                </div>
+                <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+                    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+                </div>        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+			</div>        <!-- BEGIN: Custom Footer -->
+        {{public_footer}}
+        <!-- END: Custom Footer -->
+	</body>

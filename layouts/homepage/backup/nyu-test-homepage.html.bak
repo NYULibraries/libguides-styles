@@ -1,0 +1,134 @@
+<body class="s-lib-public-body">
+        <!-- BEGIN: Page Header -->
+            {{public_header}}
+        <!-- END: Page Header -->
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+            <div id="s-lib-bc">
+                {{breadcrumbs}}
+            </div>
+            <h1 id="s-lib-public-header-title">{{title}}
+</h1>
+            <div id="s-lib-public-header-desc">{{system_intro}}
+</div>
+        </div>
+        <!-- END: Content Header -->
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            {{page_nav}}
+        </div>
+        <!-- END: Nav Bar -->
+        <!-- BEGIN: content -->
+        <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+            <div  id="s-lg-index-cols"  class="row">
+                <div  id="col1"  class="col-md-8 center">
+                    <div class="clearfix">
+                        <div id="s-lg-hp-nav"> 
+                            <ul>
+                                <li>
+                                    <ul class="nav nav-pills">
+                                        {{button_by_subject}}
+                                        {{button_all_guides}}
+                                        {{button_by_group}}
+                                        {{button_by_type}}
+                                    </ul>
+                                </li>
+<li>
+<script>
+springshare_widget_config_1436801762966 = { path: 'accounts/51794,51800,46456,51738,51791,24837,43778,2280,51779,2278,51768,51725,2277,51730,51753,59551,24856,51781,50343,51722,51729,50335,50334,51728,51789,51727,2281,51732,2111,51798,51723,51755,2279,51784,51720,51792,51724,50330,40766,51743,51773,51721,50331,3843,51767,51739,51785,51757,51772,32242,27950,51726,51751,50333,51740,51742,51731,2276,51780,51741,50344,50337,51762,51734,51782' };
+</script>
+<div id="s-lg-widget-1436801762966"></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=873&widget_type=5&load_type=2&widget_embed_type=1&output_format=2&list_format=1&drop_text=Select+a+User...&account_ids%5B0%5D=51794&account_ids%5B1%5D=51800&account_ids%5B2%5D=46456&account_ids%5B3%5D=51738&account_ids%5B4%5D=51791&account_ids%5B5%5D=24837&account_ids%5B6%5D=43778&account_ids%5B7%5D=2280&account_ids%5B8%5D=51779&account_ids%5B9%5D=2278&account_ids%5B10%5D=51768&account_ids%5B11%5D=51725&account_ids%5B12%5D=2277&account_ids%5B13%5D=51730&account_ids%5B14%5D=51753&account_ids%5B15%5D=59551&account_ids%5B16%5D=24856&account_ids%5B17%5D=51781&account_ids%5B18%5D=50343&account_ids%5B19%5D=51722&account_ids%5B20%5D=51729&account_ids%5B21%5D=50335&account_ids%5B22%5D=50334&account_ids%5B23%5D=51728&account_ids%5B24%5D=51789&account_ids%5B25%5D=51727&account_ids%5B26%5D=2281&account_ids%5B27%5D=51732&account_ids%5B28%5D=2111&account_ids%5B29%5D=51798&account_ids%5B30%5D=51723&account_ids%5B31%5D=51755&account_ids%5B32%5D=2279&account_ids%5B33%5D=51784&account_ids%5B34%5D=51720&account_ids%5B35%5D=51792&account_ids%5B36%5D=51724&account_ids%5B37%5D=50330&account_ids%5B38%5D=40766&account_ids%5B39%5D=51743&account_ids%5B40%5D=51773&account_ids%5B41%5D=51721&account_ids%5B42%5D=50331&account_ids%5B43%5D=3843&account_ids%5B44%5D=51767&account_ids%5B45%5D=51739&account_ids%5B46%5D=51785&account_ids%5B47%5D=51757&account_ids%5B48%5D=51772&account_ids%5B49%5D=32242&account_ids%5B50%5D=27950&account_ids%5B51%5D=51726&account_ids%5B52%5D=51751&account_ids%5B53%5D=50333&account_ids%5B54%5D=51740&account_ids%5B55%5D=51742&account_ids%5B56%5D=51731&account_ids%5B57%5D=2276&account_ids%5B58%5D=51780&account_ids%5B59%5D=51741&account_ids%5B60%5D=50344&account_ids%5B61%5D=50337&account_ids%5B62%5D=51762&account_ids%5B63%5D=51734&account_ids%5B64%5D=51782&sort_type=0&widget_title=Bobst+Librarians+%26+Staff&widget_height=300&widget_width=100%25&widget_link_color=%2357068c&guide_published=2&window_target=2&config_id=1436801762966";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1436801762966");</script>
+</li>
+                                <li id="s-lg-hp-nav-bottom">
+                                    <div class="clearfix">
+                                        {{search_guides}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- {{guide_list_controls}} -->
+                    </div>
+                    <div id="s-lg-index-list" class="">
+                    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                    
+						<div id="tab-content-guides">
+	  <div id="col1">
+	   <div id="outer1"><button id="button1" class="toggle-button" onclick="show(1)">+</button>Areas & Cultural Studies</div>
+	   <div id="inner1" class="inner-hidden">
+	      <p><a href=#>Cultural Guide 1</a></p>
+		  <p><a href=#>Cultutal Guide 2</a></p>
+	   </div>
+	   <br/>
+	   <div id="outer2"><button id="button2" class="toggle-button" onclick="show(2)">+</button>Art</div>
+	   <div id="inner2" class="inner-hidden">
+	      <p><a href=#>Art Guide 1</a></p>
+		  <p><a href=#>Art Guide 2</a></p>
+	   </div>
+	  </div> 
+	  <div id="col2">
+	   <div id="outer10"><button id="button10" class="toggle-button" onclick="show(10)">+</button>Performing Arts</div>
+	   <div id="inner10" class="inner-hidden">
+	      <p><a href=#>Performing Arts Guide 1</a></p>
+		  <p><a href=#>Performing Arts Guide 2</a></p>
+	   </div>
+	   <br/>
+	   <div id="outer11"><button id="button11" class="toggle-button" onclick="show(11)">+</button>Philosophy</div>
+	   <div id="inner11" class="inner-hidden">
+	      <p><a href=#>Philosophy Guide 1</a></p>
+		  <p><a href=#>Philosophy Guide 2</a></p>
+	   </div>
+	  </div> 
+	</div>
+
+                      
+                   </div>
+                </div>
+                <div  id="col2"  class="col-md-4 center">
+                    {{content_boxes}}
+                </div>
+            </div>
+        </div>
+        <!-- END: content -->
+        <!-- BEGIN: Page Footer -->
+        <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+            <div>
+                <div id="s-lib-footer-brand">
+                    Powered by <a href="http://www.springshare.com">Springshare</a>.
+                </div>
+                <div id="s-lib-footer-rights">
+                    All rights reserved.
+                </div>
+                <div id="s-lib-footer-login-link">
+                    <a href="{{login_url}}
+">Login to LibApps</a>.
+                </div>
+           	</div>
+            <div>
+                <div id="s-lib-footer-print-link">
+                    View this page in a format suitable for <a href="#">printers and screen-readers</a>.
+                </div>
+                <div id="s-lib-footer-support-link">
+                                    </div>
+          	</div>
+        </div>
+        <!-- END: Page Footer -->
+        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <div id="s-lib-popover-title" class="hide">
+                    <span class="text-info"><strong>title</strong></span> 
+                    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button> 
+                </div>
+                <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+                    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+                </div>        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+			</div>        <!-- BEGIN: Custom Footer -->
+        {{public_footer}}
+        <!-- END: Custom Footer -->
+	</body>
