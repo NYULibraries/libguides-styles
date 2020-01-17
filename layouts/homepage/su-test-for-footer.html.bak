@@ -1,0 +1,273 @@
+<body class="s-lib-public-body">
+    {{skip_link}}
+    <!-- BEGIN: Page Header -->
+   <!-- ADD BEGIN:10.25 -->
+<header class="header">
+    <div class="wrap">
+        <h1 class="logo vertical-center">
+            <a href="/" title="Homepage">
+                <img src="https://cdn.library.nyu.edu/images/nyulibraries-logo.svg" alt="NYU Libraries logo" width="233" height="30">
+            </a>
+        </h1>
+    </div>
+</header>
+        <!-- ADD END:10.25 -->
+    <!-- END: Page Header -->
+    <!-- BEGIN: Content Header -->
+    <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+          <div class="wrap">
+        <nav id="s-lib-bc" aria-label="breadcrumb">
+            {{breadcrumbs}}
+        </nav>
+        <h1 id="s-lib-public-header-title">{{title}}
+</h1>
+        <div id="s-lib-public-header-desc">{{system_intro}}
+</div>
+    </div>
+     </div>
+    <!-- END: Content Header -->
+    <!-- BEGIN: Nav Bar -->
+    <div id="s-lib-public-nav" class="container s-lib-side-borders">
+        {{page_nav}}
+    </div>
+    <!-- END: Nav Bar -->
+    <!-- BEGIN: content -->
+    <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+        <div id="s-lg-index-cols" class="row">
+            <div id="col1" class="col-md-8 center">
+                <div class="clearfix">
+                    <div id="s-lg-hp-nav">
+                        <ul>
+                            <li>
+                                <ul class="nav nav-pills">
+                                    {{button_all_guides}}
+                                    {{button_by_group}}
+                                    {{button_by_subject}}
+                                    {{button_by_type}}
+                                    {{button_by_owner}}
+                                </ul>
+                            </li>
+                            <li id="s-lg-hp-nav-bottom">
+                                <div class="clearfix">
+                                    {{search_guides}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    {{guide_list_controls}}
+                </div>
+                <div id="s-lg-index-list" class="">
+                    {{content}}
+                </div>
+            </div>
+            <div id="col2" class="col-md-4 center">
+                {{content_boxes}}
+            </div>
+        </div>
+    </div>
+    <!-- END: content -->
+    <!-- BEGIN: Page Footer -->    
+{{system_footer}}
+    <!-- END: Page Footer -->
+    <!-- BEGIN: Page Footer su's test -->    
+<footer class="primary-footer" data-swiftype-index="false">
+      <div class="wrap">
+        <div class="block-container">
+          <div class="block block--25 footer__give">
+            <form class="footer__search" role="search">
+              <label class="sr-only" for="f_footer__search__field">  search this site </label>
+              <input id="f_footer__search__field" type="text" class="footer__search__field st-default-search-input" name="q" placeholder="  search this site " autocomplete="off" autocorrect="off" autocapitalize="off">
+              <input type="submit" aria-label="Submit search" class="footer__search__button ss-icon" value="">
+            </form>
+
+            <a class="button" href="https://www.nyu.edu/giving/give-now/?id=64">Give to the Libraries</a>
+          </div>
+
+          <div class="block block--25 footer__menu">
+            
+
+<ul class="list">
+  
+    
+    
+    
+    <li class="menu__li menu__li--login-to-nyu-home">
+      
+      
+        <a href="http://home.nyu.edu" class="menu__link menu__link--login-to-nyu-home" target="_blank">
+          Login to NYU Home
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--departments">
+      
+      
+        <a href="/departments/" class="menu__link menu__link--departments">
+          Departments
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--staff-wiki">
+      
+      
+        <a href="https://wiki.library.nyu.edu/" class="menu__link menu__link--staff-wiki" target="_blank">
+          Staff Wiki
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--staff-directory">
+      
+      
+        <a href="/people/" class="menu__link menu__link--staff-directory">
+          Staff Directory
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--status-page">
+      
+      
+        <a href="https://nyulibraries.statuspage.io" class="menu__link menu__link--status-page" target="_blank">
+          Status Page
+        </a>
+      
+
+      
+    </li>
+  
+</ul>
+
+          </div>
+
+          <div class="block block--25 footer__menu">
+            
+
+<ul class="list">
+  
+    
+    
+    
+    <li class="menu__li menu__li--research-guides">
+      
+      
+        <a href="https://guides.nyu.edu/" class="menu__link menu__link--research-guides" target="_blank">
+          Research Guides
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--faqs">
+      
+      
+        <a href="http://library.answers.nyu.edu" class="menu__link menu__link--faqs" target="_blank">
+          FAQs
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--career-opportunties">
+      
+      
+        <a href="/about/who-we-are/career-opportunities/" class="menu__link menu__link--career-opportunties">
+          Career Opportunties
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--contact-us">
+      
+      
+        <a href="/contact/" class="menu__link menu__link--contact-us">
+          Contact Us
+        </a>
+      
+
+      
+    </li>
+  
+    
+    
+    
+    <li class="menu__li menu__li--accessibility">
+      
+      
+        <a href="https://www.nyu.edu/footer/accessibility.html" class="menu__link menu__link--accessibility" target="_blank">
+          Accessibility
+        </a>
+      
+
+      
+    </li>
+  
+</ul>
+
+          </div>
+
+          <div class="block block--25 footer__social">
+            <p>
+              Find out about upcoming programs, events, and resources.<br>
+              <a class="ss-navigateright right" href="https://bit.ly/nyuliblink">Subscribe to our email list</a>
+            </p>
+
+            
+              <a href="https://twitter.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Twitter"></a>
+            
+
+            
+              <a href="https://www.facebook.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Facebook"></a>
+            
+
+            
+              <a href="https://www.instagram.com/nyulibraries" class="ss-icon" target="_blank" aria-label="Instagram"></a>
+            
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          Unless otherwise noted, all content copyright New York University. All rights reserved.
+          <a href="/privacy-policy/">Privacy policy</a>
+
+          <a class="footer__logo" href="https://www.nyu.edu">
+            <img src="/assets/images/nyu-footer-logo.svg" alt="New York University logo" height="27">
+          </a>
+        </div>
+      </div>
+    </footer>
