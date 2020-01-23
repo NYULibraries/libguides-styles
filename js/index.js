@@ -25,12 +25,12 @@ $(document).ready(function() {
 	$('#ask-a-librarian').after("<div><a target='_blank' href='http://library.nyu.edu/forms/research/consultations.html'><button id='research-btn'><b>Schedule Research Consultation</b></button></a></div>");
 	if(document.getElementById("s-lg-guide-search")) {
 		//Changing Placeholder of Search Guides Box
-		document.getElementById("s-lg-guide-search").setAttribute("placeholder","search subject guides");  
-	}
-	if(document.getElementById("s-lg-guide-search-terms")) {
-		//Changing Placeholder of Guides Page Search Box
-		document.getElementById("s-lg-guide-search-terms").setAttribute("placeholder","enter your search here");  
+		document.getElementById("s-lg-guide-search").setAttribute("placeholder","Search guides");  
 	}
 
 	info_style_change();
+	// if(document.getElementById("s-lg-guide-search-terms")) {
+	// 	//Changing Placeholder of Guides Page Search Box
+	// 	document.getElementById("s-lg-guide-search-terms").setAttribute("placeholder","enter your search here");  
+	// }
 });
