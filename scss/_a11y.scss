@@ -1,0 +1,42 @@
+a, 
+button,
+textarea,
+.btn,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+input[type="submit"] {
+	&:focus{
+		@include focusOutline;
+	}
+}
+
+#s-lg-public-skiplink {
+	border-bottom-right-radius: 0;
+	padding: 0;
+	border: 0;
+	&:focus {
+		position: absolute;
+		width: auto;
+		height: auto;
+		z-index: 999999;
+		background-color:white !important;
+		padding-left: 2px;
+		padding-right: 2px;
+		overflow: visible;
+		text-decoration: none;
+		transition: none;
+	}
+}

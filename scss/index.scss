@@ -1,40 +1,83 @@
 @import 'arch';
 @import 'temporary';
+@import 'reset';
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+@import 'a11y';
+@import 'breadcrumbs';
+@import 'header';
 
 body {
 	padding-left: 0;
 	padding-right: 0;
+	font-family: $family_gotham;
+	font-size: $font_size_base;
 }
 
-header {
-	&.header {
-		background-color: #57068C;
+h1{
+  font-family: $family_gotham_narrow;
+  font-size: 36px;
+  font-weight: $weight_light;
+
+  @include max-width($bp_mobile_body){
+    font-size: 28px;
+  }
+}
+
+#s-lg-guide-header-info h1, .s-lib-header h1, #s-lg-guide-name {
+  font-family: $family_gotham_narrow;
+  font-size: 36px;
+  font-weight: $weight_light;
+}
+
+h2{
+  font-size: $font_size_large;
+
+  @include max-width($bp_mobile_body){
+    font-size: $font_size_medium;
+  }
+}
+
+h3, h4{
+  font-size: $font_size_medium;
+
+  @include max-width($bp_mobile_body){
+    font-size: $font_size_base;
+  }
+}
+
+.heading{
+  @include antialias;
+  font-family: $family_gotham;
+}
+
+a,
+#s-lib-footer-login-link a, 
+#s-lib-footer-support-link a {
+	color: $text_blue;
+	&:hover {
+		color: $text_blue;
 	}
-	h1 {
-		margin: 0;
-		padding: 39px 0;
-		display: block;
-		a {
-			display: block;
-		}
-	}
-	& > div {
-		margin: 0 auto;
-	}
 }
 
-div.s-lg-az-result-description  {
-	font-size: 12px !important;
+// A hack because LG named a class for a font-weight
+.bold {
+	font-weight: normal;
 }
 
-a.s-lg-label-more, a.s-lg-label-less {
-	font-size: 12px !important;
-}
+// div.s-lg-az-result-description  {
+// 	font-size: 12px !important;
+// }
 
-a {
-	font-family: helvetica, arial, sans-serif; 
-	color: #448CCB !important
-}
+// a.s-lg-label-more, a.s-lg-label-less {
+// 	font-size: 12px !important;
+// }
+
+// a {
+// 	font-family: helvetica, arial, sans-serif; 
+// 	color: #448CCB !important
+// }
 	 
 /* Guides Page Left Tabs Dropdown Menu links*/
 .dropdown-menu > li > a:hover, 
@@ -67,10 +110,10 @@ a {
 	background-color: #ffffff;
 }
 
-.bold {
-	color: #4A4A4A !important; 
-	font-weight: normal !important; 
-}
+// .bold {
+// 	color: #4A4A4A !important; 
+// 	font-weight: normal !important; 
+// }
 
 .s-lg-index-nav-btn {
 	color: #57068c !important;
@@ -91,15 +134,7 @@ a {
 	-moz-border-radius: 0 !important;
 }
 
-#s-lg-hp-nav .nav-pills > li.active > a:hover, 
-#s-lg-hp-nav .nav-pills > li.active > a:focus, 
-#s-lg-hp-nav .nav-pills > li.active > a {
-	background-color: #FFFFFF !important;  
-	border-bottom: 4px solid !important;
-	border-bottom-color: #57068C !important;
-	border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-}
+
 
 .nav>li>a:hover, 
 .nav>li>a:focus {
@@ -110,10 +145,7 @@ a {
 	border-bottom-color: #EEEEEE !important;
 }
 
-#s-lg-hp-nav .nav-pills {
-	border-bottom: 2px solid !important;
-	border-bottom-color: #57068C !important;
-}
+
 
 .btn.btn-sm.btn-primary	{
 	background-image: none !important;
@@ -129,9 +161,7 @@ a {
 	color: #FFFFFF  !important;
 }
 
-#s-lg-hp-nav {
-	background-color: #FFFFFF !important;
-}
+
 
 .s-lg-index-nav-btn > a {
     color: #57068C !important;
@@ -139,28 +169,28 @@ a {
     font-size: 14px;
 }
 
-/*Breadcrumb Div*/
-.breadcrumbs {
-	border: 2px solid;
-	border-color: #57068C !important;
-	margin-top: 10px !important;
-	padding: 5px 10px 0px 0px !important;
-	font-size: 12px !important;
-}
+// /*Breadcrumb Div*/
+// .breadcrumbs {
+// 	border: 2px solid;
+// 	border-color: #57068C !important;
+// 	margin-top: 10px !important;
+// 	padding: 5px 10px 0px 0px !important;
+// 	font-size: 12px !important;
+// }
 
-.breadcrumb > li {
-	font-size: 12px !important;
-}
+// .breadcrumb > li {
+// 	font-size: 12px !important;
+// }
 
-#s-lib-bc-list {
-	margin-left: 10px !important;
-}
+// #s-lib-bc-list {
+// 	margin-left: 10px !important;
+// }
 
-a, 
-.ui-widget-content a {
-	color:  #027bc2 !important;
-	font-size: 12px !important;
-}
+// a, 
+// .ui-widget-content a {
+// 	color:  #027bc2 !important;
+// 	font-size: 12px !important;
+// }
 
 /*Removing Rounded Corners from the boxes*/
 .panel-default {
@@ -292,10 +322,10 @@ a,
 }
 
 /* Guides Page Content Box */
-.s-lib-box {
-	box-shadow: none !important;
-	border: none !important;
-}
+// .s-lib-box {
+// 	box-shadow: none !important;
+// 	border: none !important;
+// }
 
 /* Guides Page Box Title */
 .s-lib-box-title {
@@ -317,9 +347,9 @@ a,
 }
 
 /* Guides Page Guide Name */
-#s-lg-guide-name {
-	font-size: 24px !important;
-}
+// #s-lg-guide-name {
+// 	font-size: 24px !important;
+// }
 
 #s-lg-tabs-container .nav-tabs > li > a:hover,
 #s-lg-tabs-container .nav-pills > li > a:hover {

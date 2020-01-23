@@ -1,0 +1,16 @@
+header {
+	&.header {
+		background-color: $nyu_purple;
+	}
+	h1 {
+		margin: 0;
+		padding: 39px 0;
+		display: block;
+		a {
+			display: block;
+		}
+	}
+	& > div {
+		margin: 0 auto;
+	}
+}
