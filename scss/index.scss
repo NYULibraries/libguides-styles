@@ -112,6 +112,11 @@ a {
 	font-size: 90% !important;
 }
 
+input[type='text'].s-lg-form-control {
+	font-size: $font_size_base !important;
+	height: 34px !important;
+}
+
 // div.s-lg-az-result-description  {
 // 	font-size: 12px !important;
 // }
