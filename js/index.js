@@ -15,9 +15,9 @@ $(document).on('DOMNodeInserted', '#s-lg-az-content', function () {
 // This is inherited jQuery, it needs to be reviewed and possibly eliminated
 $(document).ready(function() {
 	//Changing By Owner to By Author
-	$('#s-lg-index-owner-btn').find('a').html("BY AUTHOR");
+	// $('#s-lg-index-owner-btn').find('a').html("BY AUTHOR");
 	//Changing By Group to By Campus Location
-	$('#s-lg-index-group-btn').find('a').html("BY CAMPUS LOCATION");  
+	// $('#s-lg-index-group-btn').find('a').html("BY CAMPUS LOCATION");  
 	//Changing Text of Search Button
 	// $('.btn-default').html("Search");  
 	//Removing default Search text

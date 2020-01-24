@@ -10,12 +10,20 @@
 @import 'footer';
 @import 'hide';
 @import 'guide';
+@import 'profile';
+@import 'tabs';
 
 body {
 	padding-left: 0;
 	padding-right: 0;
 	font-family: $family_gotham;
 	font-size: $font_size_base;
+}
+
+@include max-width($bp_small_page_heading){
+  .container {
+    margin: 0 1em;
+  }
 }
 
 .heading{
@@ -37,16 +45,9 @@ h1{
   }
 }
 
-// Guide name
-#s-lg-guide-header-info h1, .s-lib-header h1, #s-lg-guide-name {
-  font-family: $family_gotham_narrow;
-  font-size: 36px;
-  font-weight: $weight_light;
-}
-
 // Side bar h2 headers
 .s-lib-public-side-header h2 {
-	color: $text_black;
+	color: $text_dark_gray;
 }
 
 // Resize h2s across the bord
@@ -54,6 +55,7 @@ h1{
 .s-lib-public-side-header h2,
 h2{
   font-size: $font_size_large;
+  color: $text_dark_gray;
 
   @include max-width($bp_mobile_body){
     font-size: $font_size_medium;
@@ -80,19 +82,7 @@ a {
 	font-weight: normal;
 }
 
-// Buttons
-
-.s-lib-profile-email a {
-  background-color: $nyu_purple;
-  font-size: $font_size_base;
-  padding: 1em;
-  margin: 0;
-  &:hover {
-    text-decoration: underline;
-    background-color: $nyu_purple !important;
-  }
-}
-
+// Make selects fit container
 .form-inline select.form-control {
 	width: 100%;
 }
@@ -115,12 +105,72 @@ a {
 	color: white;
 }
 
+// Make external link indicator icon readable size and color
 .fa-external-link {
 	color: white;
 	font-size: 90% !important;
 }
 
+// Normalize size of text inputs
 input[type='text'].s-lg-form-control {
 	font-size: $font_size_base !important;
 	height: 34px !important;
+}
+
+// Remove box shadow and borders from side boxes
+.s-lib-box-std .s-lib-box-title {
+  background: none;
+}
+
+.s-lib-box {
+  border: none;
+  box-shadow: none;
+}
+
+.badge {
+  background-color: $text_black;
+}
+
+.navbar-default .navbar-brand {
+  &, &:hover {
+    color: $text_black;
+  }
+}
+
+// Buttons
+button,
+.btn,
+.btn-primary {
+  background-image: none;
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
+}
+
+form button,
+form .btn,
+form .btn-info,
+.s-lg-hp-btn-section {
+  // These chained pseudo-classes all have to be overridden , oy
+  &, &:hover, &:hover:active, &:active, &:focus, &:active:focus {
+    background-color: $nyu_purple;
+    color: white;
+  }
+}
+
+.s-lg-index-nav-btn button.btn {
+  background-color: none !important; 
+}
+
+.input-group-sm > .form-control, 
+.input-group-sm > .input-group-addon, 
+.input-group-sm > .input-group-btn > .btn {
+  font-size: $font_size_base;
+  height: auto;
+  padding: auto;
+}
+
+// Hack until we can change the actual inline content of the HP AZ search box
+#s-lg-embedded-search-widget-1523468968820 button {
+  color: white !important;
 }

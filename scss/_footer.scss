@@ -4,20 +4,21 @@
 
 .s-lib-public-body #s-lib-footer-public,
 .s-lib-footer,
-#s-lib-footer-public, {
+#s-lib-footer-public {
   border-top: none;
   margin: 0 auto;
   font-size: 100%;
   background-color: $text_black;
   color: $text_footer_gray;
-  padding: 45px 0;
+  padding: 45px 0 0 0;
 }
 
 .s-lib-public-body #s-lib-footer-public,
 .s-lib-footer,
 #s-lib-footer-public,
 #s-lib-footer-login-link, 
-#s-lib-footer-support-link {
+#s-lib-footer-support-link,
+.custom-footer {
   a {
     color: $text_footer_dark_gray;
     text-decoration: underline;
@@ -33,4 +34,22 @@
 
 .bold, .s-lg-bold, .s-lg-book-title {
   font-size: 100%;
+}
+
+.custom-footer {
+  margin: 0 auto;
+  & > div.container {
+    background-color: $text_black;
+    padding: 10px 0 45px 15px;
+  }
+  @include max-width($bp_small_page_heading){
+    .container {
+      margin: 0 auto;
+    }
+  }
+}
+
+.s-lib-public-body .custom-footer {
+  background-color: $text_black;
+  text-align: center;
 }
