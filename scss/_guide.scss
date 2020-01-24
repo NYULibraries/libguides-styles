@@ -1,0 +1,9 @@
+// Guides Page Box Title 
+.s-lib-box {
+  background-color: transparent; 
+  h2.s-lib-box-title {
+    background-color: transparent;
+    border-bottom: 1px solid $border_solid_gray;
+    padding-left: 0;
+  }  
+}

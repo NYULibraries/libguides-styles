@@ -1,0 +1,33 @@
+.s-lib-public-body #s-lib-footer-public,
+.s-lib-footer,
+#s-lib-footer-public {
+  border-top: none;
+  margin: 0;
+  width: 100%;
+  font-size: 100%;
+  background: $text_black;
+  color: $text_footer_gray;
+  padding: 45px 0;
+}
+
+.s-lib-public-body #s-lib-footer-public,
+.s-lib-footer,
+#s-lib-footer-public,
+#s-lib-footer-login-link, 
+#s-lib-footer-support-link {
+  a {
+    color: $text_footer_dark_gray;
+    text-decoration: underline;
+    &:hover {
+      color: $text_footer_white;
+    }
+  }
+}
+
+.s-lg-text-greyout {
+  color: $text_footer_gray;
+}
+
+.bold, .s-lg-bold, .s-lg-book-title {
+  font-size: 100%;
+}

@@ -19,9 +19,9 @@ $(document).ready(function() {
 	//Changing By Group to By Campus Location
 	$('#s-lg-index-group-btn').find('a').html("BY CAMPUS LOCATION");  
 	//Changing Text of Search Button
-	$('.btn-default').html("Search");  
+	// $('.btn-default').html("Search");  
 	//Removing default Search text
-	$('form.form-inline.pull-right').find('span').html("");  
+	// $('form.form-inline.pull-right').find('span').html("");  
 	$('#ask-a-librarian').after("<div><a target='_blank' href='http://library.nyu.edu/forms/research/consultations.html'><button id='research-btn'><b>Schedule Research Consultation</b></button></a></div>");
 	if(document.getElementById("s-lg-guide-search")) {
 		//Changing Placeholder of Search Guides Box

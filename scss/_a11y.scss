@@ -27,6 +27,7 @@ input[type="submit"] {
 	border-bottom-right-radius: 0;
 	padding: 0;
 	border: 0;
+	transition: none;
 	&:focus {
 		position: absolute;
 		width: auto;

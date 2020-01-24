@@ -16,3 +16,14 @@
 	border-bottom: 2px solid !important;
 	border-bottom-color: #57068C !important;
 }
+
+/*Removing Rounded Corners from the boxes*/
+.panel-default {
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+}
+
+.panel-heading {
+	background-color: #F3F0F5  !important;
+	border-color: #E2E0E0 !important;
+}
