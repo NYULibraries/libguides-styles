@@ -1,5 +1,13 @@
+// Comment out the background-color for the footer containers 
+// until we standardize all pages on a single template
+
 .footer-container {
-  background: $text_black;
+  // background: $text_black;
+}
+
+.s-lib-public-body .custom-footer {
+  // background-color: $text_black;
+  text-align: center;
 }
 
 .s-lib-public-body #s-lib-footer-public,
@@ -47,9 +55,4 @@
       margin: 0 auto;
     }
   }
-}
-
-.s-lib-public-body .custom-footer {
-  background-color: $text_black;
-  text-align: center;
 }
