@@ -14,13 +14,15 @@ All custom Javascript fo LibGuides start through the `js/index.js` entrypoint bu
 
 ## Layouts
 
-There is no way in LibGuides to host templates externally so we will just use this repository as a copy of the templating work we have to do directly in the LG interface. It is not the canonical source of truth and may become out-of-sync with the live version if not meticulously manually managed.
+There is no way in LibGuides to host templates externally so we will just use this repository as a copy of the templating work we have to do directly in the LG interface. **We treat these version-controlled layouts as the canonical source even though they are not automatically synced up with the application, this means that at any time we can override the live version with the version managed here.**
 
 ### Layouts structure
 
 LibGuides allows for the customization of a number of types of pages and our `layouts` directory is structured to reflect those:
 
 - `guide` - an actual research guide, e.g. https://guides.nyu.edu/health
+  - `tabs` - navigation as top tabs
+  - `side-nav` - navigation on the side instead of the top
 - `homepage` - the homepage, e.g. https://guides.nyu.edu
 - `search` - search results page
 - `subject`
