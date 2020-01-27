@@ -1,5 +1,5 @@
 
-.well {
+.az-layout .well {
   margin-top: 10px;
 }
 
@@ -7,15 +7,18 @@
   color: black;
   font-size: 120%;
 }
+
 #alert-heading a {
   color: blue !important;
   font-size: inherit !important;
 }
+
 #bobcat_tabs .nav-pills > li > a {
   width: 160px !important; /* <--------- Change the width of the tabs */
   background-color: whitesmoke !important;
   text-align: center !important; 
 }
+
 #bobcat_tabs .nav-pills > li.active > a,
 #bobcat_tabs .nav-pills > li > a:hover,
 #bobcat_tabs .nav-pills > li > a:focus {
@@ -25,6 +28,7 @@
   font-weight: normal !important;
   border-radius: 4px !important;
 }
+
 .arch_big_button a {
   background-color: #57068c;
   padding: 20px 0;
@@ -44,42 +48,42 @@
 }
 
 
-.s-lg-az-result-keywords {
-display: none;
+.az-layout .s-lg-az-result-keywords {
+  display: none;
 }
 
-.s-lg-label-more-info button {
-    font-size: 1.0em;
+.az-layout .s-lg-label-more-info button {
+  font-size: 1.0em;
 }
 
-.s-lg-label-lib-review {
-   display: none;
+.az-layout .s-lg-label-lib-review {
+  display: none;
 }    
 
-.s-lg-content-more-info {
-    font-size: 1.0em;
+.az-layout .s-lg-content-more-info {
+  font-size: 1.0em;
 }
 
-#s-lib-public-header-desc {
-display: none;
+.az-layout #s-lib-public-header-desc {
+  display: none;
 }
 
-.s-lib-box-title {
-display: none;
+.az-layout .s-lib-box-title {
+  isplay: none;
 }
 
-#s-lg-guide-search-box {
-display: none;
+.az-layout #s-lg-guide-search-box {
+  display: none;
 }
 
-#s-lg-guide-name {
-display: none;
+.az-layout #s-lg-guide-name {
+  display: none;
 }
 
-#s-lib-bc {
-display: none;
+.az-layout #s-lib-bc {
+  display: none;
 }
 
-#s-lib-bc-guide {
-display: none;
+.az-layout #s-lib-bc-guide {
+  display: none;
 }

@@ -1,0 +1,186 @@
+<script>
+  var info_style_change = function() {
+    $('.s-lg-content-more-info').each(function(index, value) { 
+      $(value).attr("style","display:block");
+      $(value).addClass("well");
+    });
+    $('.s-lg-label-more-info').hide();
+  }
+
+  // Executes on document.ready to address content in sidebar
+  $(document).on('ready', function() {
+    info_style_change();
+  });
+
+  // Page instrumented such that style changes occur when AZ content
+  // is inserted onto the page:
+  $(document).on('DOMNodeInserted', '#s-lg-az-content', function () {
+    info_style_change();
+  });
+</script>
+
+<style>
+.az-layout .well {
+    margin-top: 10px;
+  }
+</style> 
+
+<style type="text/css">
+#alert-heading {
+  color: black;
+  font-size: 120%;
+}
+#alert-heading a {
+  color: blue !important;
+  font-size: inherit !important;
+}
+#bobcat_tabs .nav-pills > li > a {
+  width: 160px !important; /* <--------- Change the width of the tabs */
+  background-color: whitesmoke !important;
+  text-align: center !important; 
+}
+#bobcat_tabs .nav-pills > li.active > a,
+#bobcat_tabs .nav-pills > li > a:hover,
+#bobcat_tabs .nav-pills > li > a:focus {
+  background-color: #e8e8e8 !important;
+  outline: 0 !important;
+  border-bottom: 0 !important;
+  font-weight: normal !important;
+  border-radius: 4px !important;
+}
+.arch_big_button a {
+  background-color: #57068c;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline-block !important;
+  font-size: 23px !important;
+  letter-spacing: 1px !important;
+  line-height: 25px !important;
+}
+.arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+</style>
+<style>
+
+.az-layout .s-lg-az-result-keywords {
+display: none;
+}
+
+.az-layout .s-lg-label-more-info button {
+    font-size: 1.0em;
+}
+
+.az-layout .s-lg-label-lib-review {
+   display: none;
+}    
+
+.az-layout .s-lg-content-more-info {
+    font-size: 1.0em;
+}
+
+.az-layout  #s-lib-public-header-desc {
+display: none;
+}
+
+.az-layout .s-lib-box-title {
+display: none;
+}
+
+</style>	
+
+<body class="s-lib-public-body az-layout">
+		{{skip_link}}
+        <!-- BEGIN: Page Header -->
+            {{public_header}}
+        <!-- END: Page Header -->
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+            <div id="s-lib-bc"><br><b><a href=http://library.nyu.edu>NYU Libraries</a>  &nbsp > &nbsp <a href=http://bobcat.library.nyu.edu>BobCat</a> &nbsp  > </b>&nbsp Databases A - Z
+            <p>
+<div>
+<nav id="bobcat_tabs">
+<ul class="nav nav-pills">
+	<li><a title="Search NYU's catalog for books, journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings" alt="Search NYU's catalog for books, journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings" href="http://bobcat.library.nyu.edu">Books &amp; More</a></li>
+	<li class="active"><a title="Search databases for articles or browse databases by subject" alt="Search databases for articles or browse databases by subject" href="https://guides.nyu.edu/arch">Articles &amp; Databases</a></li>
+	<li><a title="Search for library materials that are held at one location for a particular course" alt="Search for library materials that are held at one location for a particular course" href="https://ares.library.nyu.edu">Course Reserves</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<br>
+            <h1 id="s-lib-public-header-title">{{page_title}}</h1>
+            <div class="alert alert-warning" id="alert-heading">Journals are now in the <a href="http://bobcat.library.nyu.edu/primo-explore/search?vid=NYU">Books &amp; More tab</a></div>
+            <div id="s-lib-public-header-desc">{{page_description}}</div>
+        </div>
+        <!-- END: Content Header -->
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            {{page_nav}}
+        </div>
+        <!-- END: Nav Bar -->
+        <!-- BEGIN: content -->
+        <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+            <section>
+				<div id="s-lg-az-search-bar" class="row">
+					<div id="az-search-col-1" class="col-md-12 center">
+						{{navbar_wide}}
+					</div>
+				</div>
+			</section>
+			<section>
+				<div id="s-lg-az-cols"  class="row">
+                    			<div id="col1" class="col-md-8 center">
+						<div id="s-lg-az-index" class="pad-right-sm">
+							{{alpha_list}}
+						</div>
+						<div id="s-lg-az-search-reset" class="pad-top-med pad-bottom-med">
+							{{search_reset}}
+						</div>
+						<div id="s-lg-az-content" class="pad-right-sm pad-top-med">
+							<div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>
+						</div>
+					</div>
+			<div id="col2" class="col-md-4 center">
+						<center><a href=http://guides.nyu.edu/arch><img src=https://s3.amazonaws.com/libapps/accounts/24837/images/databses_by_subject.png></a></center><br>
+                                                {{content_box_5639369}}
+                                                {{trials_box}}
+						{{popular_box}}
+						{{content_box_experts}}
+						{{content_box_guides}}
+                                                
+					</div>
+				</div>
+			</section>
+        </div>
+        <!-- END: content -->
+        <!-- BEGIN: Page Footer -->
+        {{system_footer}}
+        <!-- END: Page Footer -->
+        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <div id="s-lib-popover-title" class="hide">
+                    <span class="text-info"><strong>title</strong></span>
+                    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
+                </div>
+                <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+                    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+                </div>        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<a href="javascript:void(0);" onclick="jQuery('html, body').animate({scrollTop: 0}, 750);" title="Back to Top" aria-label="Back to Top">
+					<span class="fa-stack fa-lg">
+					  <i class="fa fa-square-o fa-stack-2x"></i>
+					  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+					</span>
+				</a>
+			</div>        
+        <!-- BEGIN: Custom Footer -->
+        {{public_footer}}
+        <!-- END: Custom Footer -->
+	</body>

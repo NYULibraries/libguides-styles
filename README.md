@@ -29,7 +29,7 @@ LibGuides allows for the customization of a number of types of pages and our `la
 - `profile`
   - `individual-profile` - a person in the system's profile page, e.g. https://guides.nyu.edu/prf.php?account_id=24837
   - `landing-page` - https://guides.nyu.edu/prf.php
-- `az` - the A-Z database list, e.g. https://guides.nyu.edu
+- `az` - the A-Z database list, e.g. https://guides.nyu.edu/az.php
 
 Within these folders there will be a directory and an index file:
 
