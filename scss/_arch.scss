@@ -1,52 +1,46 @@
+.az-layout{
 
-.az-layout .well {
-  margin-top: 10px;
-}
+  .well {
+    margin-top: 10px;
+  }
 
-#alert-heading {
-  color: black;
-  font-size: 120%;
-}
+  #alert-heading {
+    color: $text_black;
+  }
 
-#alert-heading a {
-  color: blue !important;
-  font-size: inherit !important;
-}
+  #bobcat_tabs .nav-pills > li > a {
+    background-color: whitesmoke !important;
+    text-align: center !important; 
+  }
 
-#bobcat_tabs .nav-pills > li > a {
-  width: 160px !important; /* <--------- Change the width of the tabs */
-  background-color: whitesmoke !important;
-  text-align: center !important; 
-}
+  #bobcat_tabs .nav-pills > li.active > a,
+  #bobcat_tabs .nav-pills > li > a:hover,
+  #bobcat_tabs .nav-pills > li > a:focus {
+    background-color: #e8e8e8 !important;
+    outline: 0 !important;
+    border-bottom: 0 !important;
+    font-weight: normal !important;
+    border-radius: 4px !important;
+  }
 
-#bobcat_tabs .nav-pills > li.active > a,
-#bobcat_tabs .nav-pills > li > a:hover,
-#bobcat_tabs .nav-pills > li > a:focus {
-  background-color: #e8e8e8 !important;
-  outline: 0 !important;
-  border-bottom: 0 !important;
-  font-weight: normal !important;
-  border-radius: 4px !important;
+  .arch_big_button a {
+    background-color: #57068c;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline-block !important;
+    font-size: 23px !important;
+    letter-spacing: 1px !important;
+    line-height: 25px !important;
+  }
+  .arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
+    color: white !important;
+    text-decoration: none !important;
+  }
 }
-
-.arch_big_button a {
-  background-color: #57068c;
-  padding: 20px 0;
-  text-align: center;
-  border-radius: 10px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  width: 100%;
-  display: inline-block !important;
-  font-size: 23px !important;
-  letter-spacing: 1px !important;
-  line-height: 25px !important;
-}
-.arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
-  color: white !important;
-  text-decoration: none !important;
-}
-
 
 .az-layout .s-lg-az-result-keywords {
   display: none;
