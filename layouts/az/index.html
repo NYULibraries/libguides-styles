@@ -1,25 +1,3 @@
-<script>
-  var info_style_change = function () {
-    $('.s-lg-content-more-info').each(function (index, value) {
-      $(value).attr("style", "display:block");
-      $(value).addClass("well");
-    });
-    $('.s-lg-label-more-info').hide();
-  }
-
-  // Executes on document.ready to address content in sidebar
-  $(document).on('ready', function () {
-    info_style_change();
-  });
-
-  // Page instrumented such that style changes occur when AZ content
-  // is inserted onto the page:
-  $(document).on('DOMNodeInserted', '#s-lg-az-content', function () {
-    info_style_change();
-  });
-</script>
-
-
 <body class="s-lib-public-body az-layout">
   {{skip_link}}
   <!-- BEGIN: Page Header -->
