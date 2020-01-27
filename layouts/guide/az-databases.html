@@ -1,122 +1,84 @@
-<script>
-  var info_style_change = function () {
-    $('.s-lg-content-more-info').each(function (index, value) {
-      $(value).attr("style", "display:block");
-      $(value).addClass("well");
-    });
-    $('.s-lg-label-more-info').hide();
-  }
+<script src="https://s3.amazonaws.com/nyulibraries-www-assets/js/ebscohostsearch.js" type="text/javascript"></script>
 
-  // Executes on document.ready to address content in sidebar
-  $(document).on('ready', function () {
-    info_style_change();
-  });
-
-  // Page instrumented such that style changes occur when AZ content
-  // is inserted onto the page:
-  $(document).on('DOMNodeInserted', '#s-lg-az-content', function () {
-    info_style_change();
-  });
-</script>
-
-
-<body class="s-lib-public-body az-layout">
+<body class="s-lg-guide-body az-layout az-guide">
   {{skip_link}}
+  {{ADMIN_CMD_BAR}}
   <!-- BEGIN: Page Header -->
   {{public_header}}
   <!-- END: Page Header -->
-  <!-- BEGIN: Content Header -->
-  <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
-    <div id="s-lib-bc"><br><b><a href=http://library.nyu.edu>NYU Libraries</a> &nbsp> &nbsp <a
-            href=http://bobcat.library.nyu.edu>BobCat </a> &nbsp> </b>&nbsp Databases A - Z
-      <p>
-        <div>
-          <nav id="bobcat_tabs">
-            <ul class="nav nav-pills">
-              <li><a
-                  title="Search NYU's catalog for books, journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings"
-                  alt="Search NYU's catalog for books, journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings"
-                  href="http://bobcat.library.nyu.edu">Books &amp; More</a></li>
-              <li class="active"><a title="Search databases for articles or browse databases by subject"
-                  alt="Search databases for articles or browse databases by subject"
-                  href="https://guides.nyu.edu/arch">Articles &amp; Databases</a></li>
-              <li><a title="Search for library materials that are held at one location for a particular course"
-                  alt="Search for library materials that are held at one location for a particular course"
-                  href="https://ares.library.nyu.edu">Course Reserves</a></li>
-            </ul>
-          </nav>
-        </div>
+  <!-- BEGIN: Guide Info Header -->
+  <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+    <!-- Disable default breadcrumbs -->
+    <!--nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
+      {{breadcrumbs}}
+    </nav-->
+    <div class="pull-right">
+      <div id="s-lg-guide-header-search">
+        {{guide_search}} </div>
+      {{ADMIN_MINI_CMD_BAR}}
     </div>
-    <br>
-    <h1 id="s-lib-public-header-title">{{page_title}}</h1>
-    <div class="alert alert-warning" id="alert-heading">Journals are now in the <a
-        href="http://bobcat.library.nyu.edu/primo-explore/search?vid=NYU">Books &amp; More tab</a></div>
-    <div id="s-lib-public-header-desc">{{page_description}}</div>
-  </div>
-  <!-- END: Content Header -->
-  <!-- BEGIN: Nav Bar -->
-  <div id="s-lib-public-nav" class="container s-lib-side-borders">
-    {{page_nav}}
-  </div>
-  <!-- END: Nav Bar -->
-  <!-- BEGIN: content -->
-  <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
-    <section>
-      <div id="s-lg-az-search-bar" class="row">
-        <div id="az-search-col-1" class="col-md-12 center">
-          {{navbar_wide}}
-        </div>
+    <div id="s-lg-guide-header-info">
+      <h1 id="s-lg-guide-name">{{guide_title}}: {{page_title}}</h1>
+      <div id="s-lg-guide-desc-container">
+        <span id="s-lg-guide-description">{{guide_description}}</span>
       </div>
-    </section>
-    <section>
-      <div id="s-lg-az-cols" class="row">
-        <div id="col1" class="col-md-8 center">
-          <div id="s-lg-az-index" class="pad-right-sm">
-            {{alpha_list}}
-          </div>
-          <div id="s-lg-az-search-reset" class="pad-top-med pad-bottom-med">
-            {{search_reset}}
-          </div>
-          <div id="s-lg-az-content" class="pad-right-sm pad-top-med">
-            <div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>
-          </div>
-        </div>
-        <div id="col2" class="col-md-4 center">
-          <center><a href=http://guides.nyu.edu/arch> <img
-              src=https://s3.amazonaws.com/libapps/accounts/24837/images/databses_by_subject.png> </a> </center> <br>
-              {{content_box_5639369}}
-              {{trials_box}}
-              {{popular_box}}
-              {{content_box_experts}}
-              {{content_box_guides}}
-
-        </div>
-      </div>
-    </section>
+    </div>
   </div>
-  <!-- END: content -->
+  <!-- END: Guide Info Header -->
+  <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+    <div id="s-lg-guide-tabs" class="tabs" role="navigation" aria-label="Guide Pages">
+      <ul class="nav nav-tabs split-button-nav">
+        {{guide_nav}}
+      </ul>
+    </div>
+  </div>
+  <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+  <!-- BEGIN: Guide Content -->
+  <div id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders" tabindex="-1">
+    {{empty_page_sub_page_list}}
+    {{content}}
+    {{page_prev_next_links}}
+  </div>
+  <!-- END: Guide Content -->
   <!-- BEGIN: Page Footer -->
-  {{system_footer}}
+  <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+    <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+      <ul id="s-lg-guide-header-attributes" class="">
+        <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+          {{last_updated_display}} </li>
+        <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+          {{guide_url_display}}
+        </li>
+        <li id="s-lg-guide-print-url">
+          {{print_url_display}}
+        </li>
+      </ul>
+      <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+        {{login_url_display}} </div>
+    </div>
+    <div class="pad-bottom-sm clearfix">
+      <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+        {{support_url_display}} </div>
+      <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+        {{guide_subjects}}
+      </div>
+      <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+        {{guide_tags}}
+      </div>
+    </div>
+  </div>
   <!-- END: Page Footer -->
-  <div id="s-lib-alert" title="">
-    <div id="s-lib-alert-content"></div>
-  </div>
-  <div id="s-lib-popover-title" class="hide">
-    <span class="text-info"><strong>title</strong></span>
-    <button type="button" id="popclose" class="close"
-      onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
-  </div>
-  <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
-    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
-  </div>
-  <div id="s-lib-scroll-top" title="Back to Top">
-    <a href="javascript:void(0);" onclick="jQuery('html, body').animate({scrollTop: 0}, 750);" title="Back to Top"
-      aria-label="Back to Top">
-      <span class="fa-stack fa-lg">
+
+  <div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top">
+      <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fa fa-square-o fa-stack-2x"></i>
         <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
       </span>
     </a>
+  </div>
+  <div id="s-lib-alert" title="">
+    <div id="s-lib-alert-content"></div>
   </div>
   <!-- BEGIN: Custom Footer -->
   {{public_footer}}
