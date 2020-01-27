@@ -26,5 +26,15 @@
   border-radius: 7px;
 }
 
-
-
+// For profile tabs
+.nav-pills  {
+  li.active { 
+    &#s-lg-profile-name-btn, &#s-lg-profile-subject-btn {
+      a {
+        &, &:focus, &:hover {
+          background-color: $nyu_purple;
+        } 
+      }
+    }
+  }
+}

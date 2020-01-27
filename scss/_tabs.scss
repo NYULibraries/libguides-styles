@@ -18,13 +18,11 @@
   }
 }
 
-// For profile tabs
-.nav-pills  {
-  li.active { 
-    a {
-      &, &:focus, &:hover {
-        background-color: $nyu_purple;
-      } 
+.s-lg-tabs-side .s-lg-boxnav .list-group-item {
+  & {
+    padding-left: 1em;
+    & > a {
+      padding: 0;
     }
   }
 }

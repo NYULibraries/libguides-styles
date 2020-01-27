@@ -1,7 +1,8 @@
 // Buttons
 button,
 .btn,
-.btn-primary {
+.btn-primary,
+form input[type='submit'], {
   background-image: none;
   &:hover, &:active, &:focus {
     text-decoration: underline;
@@ -34,6 +35,7 @@ form .btn-info,
 }
 
 // Hack until we can change the actual inline content of the HP AZ search box
-#s-lg-embedded-search-widget-1523468968820 button {
+#s-lg-embedded-search-widget-1523468968820 button,
+#s-lg-embedded-search-widget-1462306134927 button {
   color: white !important;
 }
