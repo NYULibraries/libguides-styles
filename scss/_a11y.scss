@@ -23,7 +23,7 @@ input[type="submit"] {
 	}
 }
 
-#s-lg-public-skiplink {
+#s-lg-public-skiplink, .skiplink {
 	border-bottom-right-radius: 0;
 	padding: 0;
 	border: 0;
@@ -39,5 +39,8 @@ input[type="submit"] {
 		overflow: visible;
 		text-decoration: none;
 		transition: none;
+		left: 0;
+		top: 0;
+		outline: 0;
 	}
 }
