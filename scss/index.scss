@@ -104,9 +104,10 @@ a {
 
 // Make external link indicator icon readable size and color
 .fa-external-link {
-	color: white;
+	color: inherit;
 	font-size: 90% !important;
 }
+
 
 // Normalize size of text inputs
 input[type='text'].s-lg-form-control {

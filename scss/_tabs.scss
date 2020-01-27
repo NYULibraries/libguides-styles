@@ -93,3 +93,21 @@
   }
 }
 
+// The dropdown caret is not controlled by system settings
+// so hence this is needed
+#s-lg-tabs-container .nav .dropdown-toggle {
+  .caret {
+    border-top-color: $text_black;
+  }
+  &:hover {
+    .caret {
+      border-top-color: white;
+    }
+  }
+}
+
+#s-lg-tabs-container .nav .active .dropdown-toggle {
+  .caret {
+    border-top-color: white;
+  }
+}
