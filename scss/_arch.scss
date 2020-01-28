@@ -45,36 +45,21 @@
   
 }
 
-.az-layout .s-lg-az-result-keywords {
+.az-layout .s-lg-az-result-keywords,
+.az-layout .s-lg-label-lib-review,
+.az-layout #s-lib-public-header-desc,
+.az-layout #s-lg-guide-search-box,
+.az-layout #s-lg-guide-name,
+.az-layout #s-lib-bc-guide {
   display: none;
 }
 
 .az-layout .s-lg-label-more-info button {
   font-size: 1.0em;
-}
-
-.az-layout .s-lg-label-lib-review {
-  display: none;
-}    
+}  
 
 .az-layout .s-lg-content-more-info {
   font-size: 1.0em;
-}
-
-.az-layout #s-lib-public-header-desc {
-  display: none;
-}
-
-.az-layout #s-lg-guide-search-box {
-  display: none;
-}
-
-.az-layout #s-lg-guide-name {
-  display: none;
-}
-
-.az-layout #s-lib-bc-guide {
-  display: none;
 }
 
 .dropdown {
@@ -111,7 +96,11 @@
 }
 
 .az-layout-subject-column {
-  width: 50%;
+  width: 45%;
+}
+
+.az-layout-subject-column:nth-child(2) {
+  margin-left: 10%;
 }
 
 @include max-width($bp_small_page_heading) {
