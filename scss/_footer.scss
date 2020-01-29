@@ -1,11 +1,11 @@
 // Comment out the background-color for the footer containers 
 // until we standardize all pages on a single template
 
-.footer-container {
+.system-footer-container {
   // background: $text_black;
 }
 
-.s-lib-public-body .custom-footer {
+.s-lib-public-body .public-footer-container {
   // background-color: $text_black;
   text-align: center;
 }
@@ -26,7 +26,7 @@
 #s-lib-footer-public,
 #s-lib-footer-login-link, 
 #s-lib-footer-support-link,
-.custom-footer {
+.public-footer-container {
   a {
     color: $text_footer_dark_gray;
     text-decoration: underline;
@@ -36,7 +36,7 @@
   }
 }
 
-.footer, .footer-container, .custom-footer {
+.footer, .system-footer-container, .public-footer-container {
   .s-lg-text-greyout {
     color: $text_footer_gray;
   }
@@ -46,7 +46,7 @@
   font-size: 100%;
 }
 
-.custom-footer {
+.public-footer-container {
   margin: 0 auto;
   & > div.container {
     background-color: $text_black;
