@@ -26,21 +26,8 @@
   }
 
   .arch_big_button a {
-    background-color: #57068c;
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 10px;
-    letter-spacing: 1px;
     margin-bottom: 20px;
     width: 100%;
-    display: inline-block !important;
-    font-size: 23px !important;
-    letter-spacing: 1px !important;
-    line-height: 25px !important;
-  }
-  .arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
-    color: white;
-    text-decoration: none;
   }
   
 }
@@ -90,9 +77,28 @@
   width: 70% !important;
 }
 
-.databases_by_subject_button {
+.arch_big_button a {
+  background-color: #57068c;
+  padding: 20px 0;
   text-align: center;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  display: inline-block !important;
+  font-size: 23px !important;
+  letter-spacing: 1px !important;
+  line-height: 25px !important;
+}
+.arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.databases_by_subject_button.arch_big_button {
+  text-align: center;
+  a {
+    width: 270px;
+    padding: 15px 0;
+  }
 }
 
 .az-layout-subject-column {
