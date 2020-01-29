@@ -62,6 +62,32 @@ Where possible we've tried to consolidate the customizations by:
 
 **Note:** The above principles match our strategy going forward and may not be universal in the current system.
 
+## Articles & Databases/Databases A-Z logic
+
+### Layout: Databases A-Z
+
+A searchable list of database assets in Libguides is a built-in feature, which you can find here: https://guides.nyu.edu/az.php
+
+The template for this page can be set and managed via:
+
+```
+Admin > Look & Feel > Page Layout > A-Z > NYU Custom - A-Z Database Page
+```
+
+### Layout: Articles & Databases research guide
+
+The Articles & Databases page is a special guide within Libguides which organizes our database assets by subject and also provides a search into the EBSCO articles search. We've branded this guide as The Arch, you can find it here: https://guides.nyu.edu/arch
+
+The template for this page can be set and managed via:
+
+```
+Admin > Look & Feel > Page Layout > Guide > NYU Custom - Guide Pages - Articles & Databases
+```
+
+### Styles: The Arch
+
+Even though these two pages need to be managed via different templates because of how the system is setup, we prefer to keep the styles for both consolidated in `scss/_arch.scss`
+
 ## Developing locally
 
 Using an nginx proxy we can develop our styles and JS locally in realtime. To bring up the local proxy do the following:
