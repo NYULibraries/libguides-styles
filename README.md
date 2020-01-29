@@ -33,10 +33,11 @@ LibGuides allows for the customization of a number of types of pages and our `la
   - `landing-page` - https://guides.nyu.edu/prf.php
 - `az` - the A-Z database list, e.g. https://guides.nyu.edu/az.php
 
-Within these folders there will be a directory and an index file:
+Within these folders there will be a directory and an index file and potentially other filenames:
 
 - `backups` - this is where we dumped old templates that we don't use anymore
 - `index.html` - this is the customized template we're using for the page type
+- `{feature}.html` - this is a template that is either long-running (i.e. az-databases.html) or based on an ephemeral feature (i.e. a11y-work.hyml)
 
 **Note:** If a directory name matching the above list or an `index.html` doesn't exist we are using the system default template.
 

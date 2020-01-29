@@ -1,5 +1,5 @@
-.dataservices-layout { 
-  
+.dataservices-layout {
+  // Carousel styles
   .carousel-inner img {
     margin-left: auto;
     margin-right: auto;
@@ -25,11 +25,12 @@
     width: 100%;
     max-height: 500px !important;
   }
-
   .center {
     transform: translate(0%, 50%) scale(1.5, 1.5);
   }
+  // End carousel
 
+  // Animated circles
   .circle-container {
     position: relative;
     width: 36em;
@@ -109,6 +110,7 @@
   .deg315 {
     transform: rotate(315deg) translate(18em) rotate(-315deg);
   }
+  // End animated circles
 
   /* FLIP ANIMATION */
 
@@ -156,5 +158,4 @@
   .back {
     transform: rotateY(180deg);
   }
-
 }
