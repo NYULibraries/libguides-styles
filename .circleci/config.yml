@@ -42,7 +42,7 @@ jobs:
       - run:
           name: Export Dev environment
           command: |
-            echo 'export NODE_ENV=development' >> $BASH_ENV
+            echo 'export NODE_ENV=production' >> $BASH_ENV
       - *aws_env
       - *webpack_build
       - *webpack_copy
