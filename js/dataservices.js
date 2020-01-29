@@ -8,3 +8,4 @@ function toggleMe(a) {
   }
   return true;
 }
+window.toggleMe = toggleMe;
