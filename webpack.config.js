@@ -6,10 +6,14 @@ const isStaging = process.env.NODE_ENV === 'staging';
 module.exports = {
   context: path.resolve(__dirname),
   entry: {
-    index: [
-      './js/index.js',
-      './scss/index.scss',
-    ]
+		index: [
+			'./js/index.js',
+			'./scss/index.scss',
+		],
+		dataservices: [
+			'./js/dataservices.js',
+			'./scss/dataservices.scss',
+		]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
