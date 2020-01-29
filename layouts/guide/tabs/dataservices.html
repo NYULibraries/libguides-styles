@@ -1,156 +1,83 @@
-<style>
-  /* https://googledrive.com/host/0B37TgN8TJoufOVo5clhuZVFWdkk */
-  
-  .center {
-       transform: translate(0%, 50%) scale(1.5,1.5);
-  }
-  .circle-container {
-    position: relative;
-    width: 36em;
-    height: 36em;
-    padding: 8.4em;
-    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-    border: dashed 1px #E588FE;
-    border-radius: 50%;
-    margin: 1.75em auto 0;
-  }
-  .circle-container a {
-    display: block;
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 12em; height: 12em;
-    margin: -6em;
-  }
-  .circle-container img { display: block; width: 100%; }
-  /*.deg0 { transform: translate(18em); } /* 12em = half the width of the wrapper */
-  .deg90  { transform: rotate(90deg) translate(18em) rotate(-90deg); }
-  .deg38  { transform: rotate(38.6deg) translate(18em) rotate(-38.6deg); }
-  .deg141 { transform: rotate(141.4deg) translate(18em) rotate(-141.4deg); }
-  .deg192 { transform: rotate(192.8deg) translate(18em) rotate(-192.8deg); }
-  .deg244 { transform: rotate(244.2deg) translate(18em) rotate(-244.2deg); }
-  .deg295 { transform: rotate(295.8deg) translate(18em) rotate(-295.8deg); }
-  .deg347 { transform: rotate(347.2deg) translate(18em) rotate(-347.2deg); }
-  
-  /* FLIP ANIMATION */
-  /* entire container, keeps perspective */
-  .flip-container {
-    perspective: 1000;
-  }
-    /* flip the pane when hovered */
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
-      transform: rotateY(180deg);
-    }
-  
-  /* flip speed goes here */
-  .flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-  
-    position: relative;
-  }
-  
-  /* hide back of pane during swap */
-  .front, .back {
-    backface-visibility: hidden;
-  
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  /* front pane, placed above back */
-  .front {
-    z-index: 2;
-    /* for firefox 31 */
-    transform: rotateY(0deg);
-  }
-  
-  /* back, initially hidden pane */
-  .back {
-    transform: rotateY(180deg);
-  }
-  </style>
-  
-  <body class="s-lg-guide-body dataservices-layout">
-    {{skip_link}}
-    {{ADMIN_CMD_BAR}}
-    <!-- BEGIN: Page Header -->
-    {{public_header}}
-    <!-- END: Page Header -->
-    <!-- BEGIN: Guide Info Header -->
-    <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
-      <nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
-        {{breadcrumbs}}
-      </nav>
-      <div class="pull-right">
-        <div id="s-lg-guide-header-search">
-          {{guide_search}} </div>
-        {{ADMIN_MINI_CMD_BAR}}
-      </div>
-      <div id="s-lg-guide-header-info">
-        <h1 id="s-lg-guide-name">{{guide_title}}: {{page_title}}</h1>
-        <div id="s-lg-guide-desc-container">
-          <span id="s-lg-guide-description">{{guide_description}}</span>
-        </div>
+<body class="s-lg-guide-body dataservices-layout">
+  {{skip_link}}
+  {{ADMIN_CMD_BAR}}
+  <!-- BEGIN: Page Header -->
+  {{public_header}}
+  <!-- END: Page Header -->
+  <!-- BEGIN: Guide Info Header -->
+  <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
+      {{breadcrumbs}}
+    </nav>
+    <div class="pull-right">
+      <div id="s-lg-guide-header-search">
+        {{guide_search}} </div>
+      {{ADMIN_MINI_CMD_BAR}}
+    </div>
+    <div id="s-lg-guide-header-info">
+      <h1 id="s-lg-guide-name">{{guide_title}}: {{page_title}}</h1>
+      <div id="s-lg-guide-desc-container">
+        <span id="s-lg-guide-description">{{guide_description}}</span>
       </div>
     </div>
-    <!-- END: Guide Info Header -->
-    <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
-      <div id="s-lg-guide-tabs" class="tabs" role="navigation" aria-label="Guide Pages">
-        <ul class="nav nav-tabs split-button-nav">
-          {{guide_nav}}
-        </ul>
+  </div>
+  <!-- END: Guide Info Header -->
+  <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+    <div id="s-lg-guide-tabs" class="tabs" role="navigation" aria-label="Guide Pages">
+      <ul class="nav nav-tabs split-button-nav">
+        {{guide_nav}}
+      </ul>
+    </div>
+  </div>
+  <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+  <!-- BEGIN: Guide Content -->
+  <div id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders" tabindex="-1">
+    {{empty_page_sub_page_list}}
+    {{content}}
+    {{page_prev_next_links}}
+  </div>
+  <!-- END: Guide Content -->
+  <!-- BEGIN: Page Footer -->
+  <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+    <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+      <ul id="s-lg-guide-header-attributes" class="">
+        <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+          {{last_updated_display}} </li>
+        <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+          {{guide_url_display}}
+        </li>
+        <li id="s-lg-guide-print-url">
+          {{print_url_display}}
+        </li>
+      </ul>
+      <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+        {{login_url_display}} </div>
+    </div>
+    <div class="pad-bottom-sm clearfix">
+      <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+        {{support_url_display}} </div>
+      <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+        {{guide_subjects}}
+      </div>
+      <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+        {{guide_tags}}
       </div>
     </div>
-    <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
-    <!-- BEGIN: Guide Content -->
-    <div id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders" tabindex="-1">
-      {{empty_page_sub_page_list}}
-      {{content}}
-      {{page_prev_next_links}}
-    </div>
-    <!-- END: Guide Content -->
-    <!-- BEGIN: Page Footer -->
-    <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
-      <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
-        <ul id="s-lg-guide-header-attributes" class="">
-          <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
-            {{last_updated_display}} </li>
-          <li id="s-lg-guide-header-url" class="s-lg-h-separator">
-            {{guide_url_display}}
-          </li>
-          <li id="s-lg-guide-print-url">
-            {{print_url_display}}
-          </li>
-        </ul>
-        <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
-          {{login_url_display}} </div>
-      </div>
-      <div class="pad-bottom-sm clearfix">
-        <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
-          {{support_url_display}} </div>
-        <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
-          {{guide_subjects}}
-        </div>
-        <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
-          {{guide_tags}}
-        </div>
-      </div>
-    </div>
-    <!-- END: Page Footer -->
-  
-    <div id="s-lib-scroll-top">
-      <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top">
-        <span class="fa-stack fa-lg" aria-hidden="true">
-          <i class="fa fa-square-o fa-stack-2x"></i>
-          <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
-        </span>
-      </a>
-    </div>
-    <div id="s-lib-alert" title="">
-      <div id="s-lib-alert-content"></div>
-    </div>
-    <!-- BEGIN: Custom Footer -->
-    {{public_footer}}
-    <!-- END: Custom Footer -->
-  </body>
+  </div>
+  <!-- END: Page Footer -->
+
+  <div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+      </span>
+    </a>
+  </div>
+  <div id="s-lib-alert" title="">
+    <div id="s-lib-alert-content"></div>
+  </div>
+  <!-- BEGIN: Custom Footer -->
+  {{public_footer}}
+  <!-- END: Custom Footer -->
+</body>
