@@ -4,7 +4,7 @@ function toggleMe(a) {
   if (e.style.display == "none") {
     e.style.display = "block";
   } else {
-    e.style.display = "none";g
+    e.style.display = "none";
   }
   return true;
 }
