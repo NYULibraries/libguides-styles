@@ -36,8 +36,10 @@
   }
 }
 
-.s-lg-text-greyout {
-  color: $text_footer_gray;
+.footer, .footer-container, .custom-footer {
+  .s-lg-text-greyout {
+    color: $text_footer_gray;
+  }
 }
 
 .bold, .s-lg-bold, .s-lg-book-title {

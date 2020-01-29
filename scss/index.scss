@@ -95,6 +95,16 @@ a {
 	font-size: 100%;
 }
 
+// Standardize greyed out colors to just be our accessible black
+.s-lib-color-lt-grey,
+.popover-title,
+.popover-content,
+.s-lg-no-val, 
+.s-lg-text-greyout, 
+.s-lib-greyout {
+  color: $text_black;
+}
+
 .nav > li > a:hover, 
 .nav > li > a:focus {
 	text-decoration: underline;
@@ -137,5 +147,4 @@ input[type='text'].s-lg-form-control {
 .alert-info {
   background-color: transparent;
 }
-
 
