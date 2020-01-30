@@ -32,5 +32,8 @@ services:
       - "8080:8080"
     depends_on:
       - watch
+    environment:
+      # LOCAL_SERVER: 42184b3c.ngrok.io
+      LOCAL_SERVER: localhost:8080
     <<: *default-volumes
     
