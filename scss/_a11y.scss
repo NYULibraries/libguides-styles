@@ -15,32 +15,36 @@ input[type="month"],
 input[type="week"],
 input[type="time"],
 input[type="datetime"],
-input[type="datetime-local"],
+input[type="datetime-local"],L
 input[type="color"],
 input[type="submit"] {
-	&:focus{
-		@include focusOutline;
-	}
+  &:focus{
+    @include focusOutline;
+  }
+}
+
+a > div.bold {
+  display: inline-block;
 }
 
 #s-lg-public-skiplink, .skiplink {
-	border-bottom-right-radius: 0;
-	padding: 0;
-	border: 0;
-	transition: none;
-	&:focus {
-		position: absolute;
-		width: auto;
-		height: auto;
-		z-index: 999999;
-		background-color:white !important;
-		padding-left: 2px;
-		padding-right: 2px;
-		overflow: visible;
-		text-decoration: none;
-		transition: none;
-		left: 0;
-		top: 0;
-		outline: 0;
-	}
+  border-bottom-right-radius: 0;
+  padding: 0;
+  border: 0;
+  transition: none;
+  &:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 999999;
+    background-color:white !important;
+    padding-left: 2px;
+    padding-right: 2px;
+    overflow: visible;
+    text-decoration: none;
+    transition: none;
+    left: 0;
+    top: 0;
+    outline: 0;
+  }
 }
