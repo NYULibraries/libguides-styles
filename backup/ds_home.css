@@ -1,0 +1,119 @@
+/* https://googledrive.com/host/0B37TgN8TJoufOVo5clhuZVFWdkk */
+
+a {font-family: helvetica, arial, sans-serif; color: #027bc2 !important}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover {
+  background-color: #F2C4FE !important;
+  color: #57086c !important;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-pills > .active > a {
+  color: #57086c !important;
+  background-color: #E588FE !important;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover, 
+#s-lg-tabs-container .nav-pills > .active > a:hover {
+  color: #57086c !important;
+  background-color: #E588FE !important;
+}
+
+.center {
+     transform: translate(0%, 50%) scale(1.5,1.5);
+}
+.circle-container {
+  position: relative;
+  width: 36em;
+  height: 36em;
+  padding: 8.4em;
+  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+  border: dashed 1px #E588FE;
+  border-radius: 50%;
+  margin: 1.75em auto 0;
+}
+.circle-container a {
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 12em; height: 12em;
+  margin: -6em;
+}
+.circle-container img { display: block; width: 100%; }
+.deg0 { transform: translate(18em); } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(45deg) translate(18em) rotate(-45deg); }
+.deg135 { transform: rotate(135deg) translate(18em) rotate(-135deg); }
+.deg180 { transform: translate(-18em); }
+.deg225 { transform: rotate(225deg) translate(18em) rotate(-225deg); }
+.deg315 { transform: rotate(315deg) translate(18em) rotate(-315deg); }
+
+
+/*.deg0 img:last-child{display:none} 
+.deg0:hover img:first-child{display:none}
+.deg0:hover img:last-child{display:inline-block}
+
+deg45 img:last-child{display:none}
+.deg45:hover img:first-child{display:none}
+.deg45:hover img:last-child{display:inline-block}
+
+.deg135 img:last-child{display:none}
+.deg135:hover img:first-child{display:none}
+.deg135:hover img:last-child{display:inline-block}
+
+.deg180 img:last-child{display:none}
+.deg180:hover img:first-child{display:none}
+.deg180:hover img:last-child{display:inline-block}
+
+.deg225 img:last-child{display:none}
+.deg225:hover img:first-child{display:none}
+.deg225:hover img:last-child{display:inline-block}
+
+.deg315 img:last-child{display:none}
+.deg315:hover img:first-child{display:none}
+.deg315:hover img:last-child{display:inline-block} */
+
+/* FLIP ANIMATION */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+/*
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+*/
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}

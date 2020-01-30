@@ -1,12 +1,12 @@
 <body class="s-lib-public-body az-layout">
   {{skip_link}}
+  <a id="s-lg-public-skiplink-search" class="alert-info skiplink" href="#s-lg-az-search">Skip to find databases</a>
   <!-- BEGIN: Page Header -->
   {{public_header}}
   <!-- END: Page Header -->
   <!-- BEGIN: Content Header -->
   <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
-    <div id="s-lib-bc"><br><b><a href=http://library.nyu.edu>NYU Libraries</a> &nbsp> &nbsp <a
-            href=http://bobcat.library.nyu.edu>BobCat </a> &nbsp> </b>&nbsp Databases A - Z
+    <div id="s-lib-bc"><br><a href=http://library.nyu.edu>NYU Libraries</a> &nbsp> &nbsp <a href=http://bobcat.library.nyu.edu>BobCat </a> &nbsp> &nbsp Databases A - Z
       <p>
         <div>
           <nav id="bobcat_tabs">
@@ -24,6 +24,7 @@
             </ul>
           </nav>
         </div>
+      </p>
     </div>
     <br>
     <h1 id="s-lib-public-header-title">{{page_title}}</h1>
@@ -60,21 +61,22 @@
           </div>
         </div>
         <div id="col2" class="col-md-4 center">
-          <center><a href=http://guides.nyu.edu/arch> <img
-              src=https://s3.amazonaws.com/libapps/accounts/24837/images/databses_by_subject.png> </a> </center> <br>
+          <div class="databases_by_subject_button"><a href=http://guides.nyu.edu/arch> <img
+            src=https://s3.amazonaws.com/libapps/accounts/24837/images/databses_by_subject.png> </a> </div>
               {{content_box_5639369}}
               {{trials_box}}
               {{popular_box}}
               {{content_box_experts}}
               {{content_box_guides}}
-
         </div>
       </div>
     </section>
   </div>
   <!-- END: content -->
   <!-- BEGIN: Page Footer -->
-  {{system_footer}}
+  <div class="system-footer-container">
+    {{system_footer}}
+  </div>
   <!-- END: Page Footer -->
   <div id="s-lib-alert" title="">
     <div id="s-lib-alert-content"></div>

@@ -1,0 +1,40 @@
+
+#s-lg-profile-subjects button.btn-primary {
+  background-color: $nyu_purple !important;
+  border: $nyu_purple;
+}
+
+.s-lib-profile-email a {
+  background-color: $nyu_purple;
+  font-size: $font_size_base;
+  padding: 1em;
+  margin: 0;
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+    background-color: $nyu_purple !important;
+  }
+}
+
+// Inline margin requires this to be important
+#s-lg-profile-subjects {
+  margin-bottom: 4em !important;
+}
+
+.s-lib-profile-image img {
+  border: none;
+  box-shadow: none;
+  border-radius: 7px;
+}
+
+// Nav tabs for profile tabs
+.nav-pills  {
+  li.active { 
+    &#s-lg-profile-name-btn, &#s-lg-profile-subject-btn {
+      a {
+        &, &:focus, &:hover {
+          background-color: $nyu_purple;
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// Guide name
+#s-lg-guide-header-info h1, .s-lib-header h1, #s-lg-guide-name {
+  font-family: $family_gotham_narrow;
+  font-size: 36px;
+  font-weight: $weight_light;
+}
+
+// Guides Page Box Title 
+.s-lib-box {
+  background-color: transparent; 
+  h2.s-lib-box-title {
+    background-color: transparent;
+    border-bottom: 1px solid $border_solid_gray;
+    padding-left: 0;
+  }  
+}
+
+#s-lg-guide-tabs-title-bar {
+  margin-top: 1em;
+  border-top: 0;
+}

@@ -1,32 +1,80 @@
+.az-layout{
 
-.az-layout .well {
-  margin-top: 10px;
+  .well {
+    margin-top: 10px;
+  }
+
+  #alert-heading {
+    color: $text_black;
+  }
+
+  #bobcat_tabs .nav-pills {
+    & > li > a {
+      background-color: whitesmoke !important;
+      text-align: center !important; 
+    }
+    & > li.active > a, & > li > a:hover, & > li > a:focus {
+      background-color: #e8e8e8 !important;
+      outline: 0 !important;
+      border-bottom: 0 !important;
+      font-weight: normal !important;
+      border-radius: 0;
+    }
+    & > li.active > a {
+      color: $text_black;
+    }
+  }
+
+  .arch_big_button a {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
 }
 
-#alert-heading {
-  color: black;
-  font-size: 120%;
+.az-layout .s-lg-az-result-keywords,
+.az-layout .s-lg-label-lib-review,
+.az-layout #s-lib-public-header-desc,
+.az-layout #s-lg-guide-search-box,
+.az-layout #s-lg-guide-name,
+.az-layout #s-lib-bc-guide {
+  display: none;
 }
 
-#alert-heading a {
-  color: blue !important;
-  font-size: inherit !important;
+.az-layout .s-lg-label-more-info button {
+  font-size: 1.0em;
+}  
+
+.az-layout .s-lg-content-more-info {
+  font-size: 1.0em;
 }
 
-#bobcat_tabs .nav-pills > li > a {
-  width: 160px !important; /* <--------- Change the width of the tabs */
-  background-color: whitesmoke !important;
-  text-align: center !important; 
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-#bobcat_tabs .nav-pills > li.active > a,
-#bobcat_tabs .nav-pills > li > a:hover,
-#bobcat_tabs .nav-pills > li > a:focus {
-  background-color: #e8e8e8 !important;
-  outline: 0 !important;
-  border-bottom: 0 !important;
-  font-weight: normal !important;
-  border-radius: 4px !important;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.table > tbody > tr > td {
+  border-top: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#s-lg-embedded-search-widget-1462306134927 .s-lg-form-control {
+  width: 70% !important;
 }
 
 .arch_big_button a {
@@ -35,55 +83,38 @@
   text-align: center;
   border-radius: 10px;
   letter-spacing: 1px;
-  margin-bottom: 20px;
-  width: 100%;
   display: inline-block !important;
   font-size: 23px !important;
   letter-spacing: 1px !important;
   line-height: 25px !important;
 }
 .arch_big_button a, .arch_big_button a:hover, .arch_big_button a:active, .arch_big_button a:visited {
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
 }
 
-
-.az-layout .s-lg-az-result-keywords {
-  display: none;
+.databases_by_subject_button.arch_big_button {
+  text-align: center;
+  a {
+    width: 270px;
+    padding: 15px 0;
+  }
 }
 
-.az-layout .s-lg-label-more-info button {
-  font-size: 1.0em;
+.az-layout-subject-column {
+  width: 45%;
 }
 
-.az-layout .s-lg-label-lib-review {
-  display: none;
-}    
-
-.az-layout .s-lg-content-more-info {
-  font-size: 1.0em;
+.az-layout-subject-column:nth-child(2) {
+  margin-left: 10%;
 }
 
-.az-layout #s-lib-public-header-desc {
-  display: none;
+@include max-width($bp_small_page_heading) {
+  .az-layout-subject-column {
+    width: 100% !important;
+  }
 }
 
-// .az-layout .s-lib-box-title {
-//   display: none;
-// }
-
-.az-layout #s-lg-guide-search-box {
-  display: none;
-}
-
-.az-layout #s-lg-guide-name {
-  display: none;
-}
-
-// .az-layout #s-lib-bc {
-//   display: none;
-// }
-
-.az-layout #s-lib-bc-guide {
-  display: none;
+#ebscohostsearchtext {
+  width: 70%;
 }

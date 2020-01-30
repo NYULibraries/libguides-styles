@@ -1,0 +1,113 @@
+// Menu
+#s-lg-er-count-btn, #s-lg-profile-count-btn, #s-lg-srch-btn {
+  padding: 1em;
+  margin: 0;
+}
+
+// Reset spacing for all tabs
+.nav-pills li,
+#s-lg-er-nav > ul > li,  
+#s-lg-hp-nav > ul > li,
+#s-lg-profile-nav > ul > li,
+#s-lg-srch-nav > ul > li {
+  margin: 0;
+  padding: 0;
+  a {
+    padding: 1em;
+    border-radius: 0;
+  }
+}
+
+.s-lg-tabs-side .s-lg-boxnav .list-group-item {
+  & {
+    padding-left: 1em;
+    & > a {
+      padding: 0;
+    }
+  }
+}
+
+#s-lg-hp-nav {
+  padding: 0;
+  margin: 0 0 15px 0;
+  background-color: transparent;
+  & > ul > li {
+    .nav-pills {
+      background-color: transparent;
+      li { 
+        color: $text_dark_gray;
+        padding: 15px;
+        border-radius: 3px 3px 0 0;
+        margin-right: 5px;
+        border: 1px solid $border_solid_gray;
+        border-bottom: none;
+        @include max-width($bp_small_page_heading){
+          border-radius: 3px;
+          margin-bottom: 5px;
+          border-bottom: 1px solid $border_solid_gray;
+          padding: 10px;
+        }
+        @include max-width($bp_mobile_page_heading){
+          padding: 5px;
+        }
+        button {
+          color: $text_dark_gray;
+          padding: 0;
+          margin: 0;
+          &:active {
+            color: white;
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+        &.active {
+          background: $background_black;
+          pointer-events: none;
+          button {
+            color:#fff;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+#s-lg-hp-nav > ul > li#s-lg-hp-nav-bottom {
+  background-color: transparent;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+  background: #fff;
+  border-top: 1px solid $border_solid_gray;
+  border-left: 1px solid $border_solid_gray;
+  border-radius: 0 3px 3px 3px;
+  padding: 30px;
+  form.pull-right {
+    float: none !important;
+    & > div.form-group {
+      width: 100%;
+      .input-group {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// The dropdown caret is not controlled by system settings
+// so hence this is needed
+#s-lg-tabs-container .nav .dropdown-toggle {
+  .caret {
+    border-top-color: $text_black;
+  }
+  &:hover {
+    .caret {
+      border-top-color: white;
+    }
+  }
+}
+
+#s-lg-tabs-container .nav .active .dropdown-toggle {
+  .caret {
+    border-top-color: white;
+  }
+}

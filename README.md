@@ -33,10 +33,11 @@ LibGuides allows for the customization of a number of types of pages and our `la
   - `landing-page` - https://guides.nyu.edu/prf.php
 - `az` - the A-Z database list, e.g. https://guides.nyu.edu/az.php
 
-Within these folders there will be a directory and an index file:
+Within these folders there will be a directory and an index file and potentially other filenames:
 
 - `backups` - this is where we dumped old templates that we don't use anymore
 - `index.html` - this is the customized template we're using for the page type
+- `{feature}.html` - this is a template that is either long-running (i.e. az-databases.html) or based on an ephemeral feature (i.e. a11y-work.hyml)
 
 **Note:** If a directory name matching the above list or an `index.html` doesn't exist we are using the system default template.
 
@@ -60,6 +61,32 @@ Where possible we've tried to consolidate the customizations by:
 - enforcing global templates instead of group templates
 
 **Note:** The above principles match our strategy going forward and may not be universal in the current system.
+
+## Articles & Databases/Databases A-Z logic
+
+### Layout: Databases A-Z
+
+A searchable list of database assets in Libguides is a built-in feature, which you can find here: https://guides.nyu.edu/az.php
+
+The template for this page can be set and managed via:
+
+```
+Admin > Look & Feel > Page Layout > A-Z > NYU Custom - A-Z Database Page
+```
+
+### Layout: Articles & Databases research guide
+
+The Articles & Databases page is a special guide within Libguides which organizes our database assets by subject and also provides a search into the EBSCO articles search. We've branded this guide as The Arch, you can find it here: https://guides.nyu.edu/arch
+
+The template for this page can be set and managed via:
+
+```
+Admin > Look & Feel > Page Layout > Guide > NYU Custom - Guide Pages - Articles & Databases
+```
+
+### Styles: The Arch
+
+Even though these two pages need to be managed via different templates because of how the system is setup, we prefer to keep the styles for both consolidated in `scss/_arch.scss`
 
 ## Developing locally
 
