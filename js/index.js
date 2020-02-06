@@ -34,3 +34,8 @@ $(document).ready(function() {
 	// 	document.getElementById("s-lg-guide-search-terms").setAttribute("placeholder","enter your search here");  
 	// }
 });
+
+function ebscoPreProcess(myForm) {
+	myForm.bquery.value = myForm.uquery.value;
+}
+window.ebscoPreProcess = ebscoPreProcess;
