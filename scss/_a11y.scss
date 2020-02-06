@@ -32,6 +32,9 @@ a > div.bold {
   padding: 0;
   border: 0;
   transition: none;
+  position: absolute;
+  top: -42px;
+  left: 0;
   &:focus {
     position: absolute;
     width: auto;
