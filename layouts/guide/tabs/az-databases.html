@@ -9,9 +9,21 @@
   <!-- BEGIN: Guide Info Header -->
   <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
     <!-- Disable default breadcrumbs -->
-    <!--nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
-      {{breadcrumbs}}
-    </nav-->
+    <nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
+      <!-- {{breadcrumbs}} -->
+      <ol id="s-lib-bc-list" class="breadcrumb">
+        <li id="s-lib-bc-customer">
+          <a title="NYU Libraries" href="https://library.nyu.edu/">NYU Libraries
+          </a>
+        </li>
+        <li id="s-lib-bc-site">
+          <a title="Research Guides" href="http://bobcat.library.nyu.edu">BobCat
+          </a>
+        </li>
+        <li id="s-lib-bc-page" class="active">Articles &amp; Databases
+        </li>
+      </ol>
+    </nav>
     <div class="pull-right">
       <div id="s-lg-guide-header-search">
         {{guide_search}} </div>
@@ -25,7 +37,7 @@
     </div>
   </div>
   <!-- END: Guide Info Header -->
-  <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+  <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med" role="main">
     <div id="s-lg-guide-tabs" class="tabs" role="navigation" aria-label="Guide Pages">
       <ul class="nav nav-tabs split-button-nav">
         {{guide_nav}}
