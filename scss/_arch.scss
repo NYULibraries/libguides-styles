@@ -29,8 +29,41 @@
     margin-bottom: 20px;
     width: 100%;
   }
+
+  #ebscohostCustomSearchBox div.form-group,
+  #ebscohostCustomSearchBox div.input-group {
+    width: 100%;
+  }
+  #ebscohostsearchtext {
+    width: 100%;
+  }
+
+  .arch-ebs-info h4 {
+    font-size: 100%;
+  }
+
+  .btn-link[disabled=disabled],
+  button.s-lg-text-ghost {
+    &, &:hover {
+      color: $text_black;
+    }
+  }
+
+  .s-lib-header h1 {
+    margin-bottom: 0.67em;
+  }
   
 }
+
+.az-guide {
+  #s-lg-tabs-container, #s-lg-guide-tabs-title-bar {
+    display: none;
+  }
+  h1 {
+    margin: 0 0 .67em 0;
+  }
+}
+
 
 .az-layout .s-lg-az-result-keywords,
 .az-layout .s-lg-label-lib-review,
@@ -115,10 +148,3 @@
   }
 }
 
-#ebscohostCustomSearchBox div.form-group,
-#ebscohostCustomSearchBox div.input-group {
-  width: 100%;
-}
-#ebscohostsearchtext {
-  width: 100%;
-}
