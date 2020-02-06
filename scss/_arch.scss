@@ -25,11 +25,6 @@
     }
   }
 
-  .arch_big_button a {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-
   #ebscohostCustomSearchBox div.form-group,
   #ebscohostCustomSearchBox div.input-group {
     width: 100%;
@@ -140,6 +135,15 @@
     width: 270px;
     padding: 15px 0;
   }
+}
+
+.arch_big_button a {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.homepage .databases_by_subject_button.arch_big_button {
+  text-align: left;
 }
 
 .az-layout-subject-column {
