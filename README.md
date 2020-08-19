@@ -1,5 +1,7 @@
 # Libguides Styles
 
+[![Web Services](https://img.shields.io/badge/Owner-LITS%20Web%20Services-Black.svg)](https://shields.io/) 
+
 [![CircleCI](https://circleci.com/gh/NYULibraries/libguides-styles.svg?style=svg)](https://circleci.com/gh/NYULibraries/libguides-styles)
 
 Manage the CSS and JS for NYU Libraries' instance of SpringShare's LibGuides (LG) product.
