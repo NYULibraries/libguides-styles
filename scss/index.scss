@@ -17,112 +17,120 @@
 @import 'blog';
 
 body {
-	padding-left: 0;
-	padding-right: 0;
-	font-family: $family_gotham;
-	font-size: $font_size_base;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: $family_gotham;
+  font-size: $font_size_base;
+  color: $text_black;
 }
 
-@include max-width($bp_small_page_heading){
+@include max-width($bp_small_page_heading) {
   .container {
     margin: 0 1em;
   }
 }
 
-.heading{
+.heading {
   @include antialias;
   font-family: $family_gotham;
 }
 
-h1, h2, h3, h4 {
-	@extend .heading;
+h1,
+h2,
+h3,
+h4 {
+  @extend .heading;
 }
 
-h1{
+h1 {
   font-family: $family_gotham_narrow;
   font-size: 36px;
   font-weight: $weight_light;
 
-  @include max-width($bp_mobile_body){
+  @include max-width($bp_mobile_body) {
     font-size: 28px;
   }
 }
 
 // Side bar h2 headers
 .s-lib-public-side-header h2 {
-	color: $text_dark_gray;
+  color: $text_dark_gray;
 }
 
 // Resize h2s across the bord
 .s-lib-box h2.s-lib-box-title,
 .s-lib-public-side-header h2,
-h2{
+h2 {
   font-size: $font_size_large;
   color: $text_dark_gray;
 
-  @include max-width($bp_mobile_body){
+  @include max-width($bp_mobile_body) {
     font-size: $font_size_medium;
   }
 }
 
-h3, h4{
+h3,
+h4 {
   font-size: $font_size_medium;
 
-  @include max-width($bp_mobile_body){
+  @include max-width($bp_mobile_body) {
     font-size: $font_size_base;
   }
 }
 
 a {
-	color: $text_blue;
-	&:hover {
-		color: $text_blue;
-	}
+  color: $text_blue;
+
+  &:hover {
+    color: $text_blue;
+  }
 }
 
 // A hack because LG named a class for a font-weight
 .bold {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 // Make selects fit container
 .form-inline select.form-control {
-	width: 100%;
+  width: 100%;
 }
 
 //  Changing popover title size 
-.s-lg-small, .s-lib-debug, .s-lib-small, 
+.s-lg-small,
+.s-lib-debug,
+.s-lib-small,
 .popover-title {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 // Standardize greyed out colors to just be our accessible black
 .s-lib-color-lt-grey,
 .popover-title,
 .popover-content,
-.s-lg-no-val, 
-.s-lg-text-greyout, 
+.s-lg-no-val,
+.s-lg-text-greyout,
 .s-lib-greyout {
   color: $text_black;
 }
 
-.nav > li > a:hover, 
-.nav > li > a:focus {
-	text-decoration: underline;
-	outline: none;
+.nav>li>a:hover,
+.nav>li>a:focus {
+  text-decoration: underline;
+  outline: none;
 }
 
 // Make external link indicator icon readable size and color
 .fa-external-link {
-	color: inherit;
-	font-size: 90% !important;
+  color: inherit;
+  font-size: 90% !important;
 }
 
 
 // Normalize size of text inputs
 input[type='text'].s-lg-form-control {
-	font-size: $font_size_base !important;
-	height: 34px !important;
+  font-size: $font_size_base !important;
+  height: 34px !important;
 }
 
 // Remove box shadow and borders from side boxes
@@ -140,7 +148,9 @@ input[type='text'].s-lg-form-control {
 }
 
 .navbar-default .navbar-brand {
-  &, &:hover {
+
+  &,
+  &:hover {
     color: $text_black;
   }
 }
@@ -148,4 +158,3 @@ input[type='text'].s-lg-form-control {
 .alert-info {
   background-color: transparent;
 }
-
