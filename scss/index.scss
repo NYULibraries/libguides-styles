@@ -84,6 +84,10 @@ a {
   &:hover {
     color: $text_blue;
   }
+
+  span {
+    color: $text_black;
+  }
 }
 
 // A hack because LG named a class for a font-weight
