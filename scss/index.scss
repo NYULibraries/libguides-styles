@@ -21,7 +21,7 @@ body {
   padding-right: 0;
   font-family: $family_gotham;
   font-size: $font_size_base;
-  color: $text_black !important;
+  color: $text_black;
 }
 
 @include max-width($bp_small_page_heading) {
