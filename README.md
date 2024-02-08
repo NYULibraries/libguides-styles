@@ -4,7 +4,8 @@
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/libguides-styles.svg?style=svg)](https://circleci.com/gh/NYULibraries/libguides-styles)
 
-Manage the CSS and JS for NYU Libraries' instance of SpringShare's LibGuides (LG) product.
+Manage the CSS and JS for NYU Libraries' instance of SpringShare's LibGuides (LG) product:
+[NYU Libraries Research Guides](https://guides.nyu.edu/)
 
 ## CSS
 
