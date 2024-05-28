@@ -1,6 +1,6 @@
-docker-defaults: &docker-defaults
-  docker:
-    - image: quay.io/nyulibraries/circleci_docker:18.06.1-dc-1.23.2-0
+machine-defaults: &machine-defaults
+  machine:
+    image: ubuntu-2204:current
   working_directory: ~/app
 
 aws_env: &aws_env
@@ -10,19 +10,23 @@ aws_env: &aws_env
       echo 'export AWS_ACCESS_KEY_ID=${WEB_CDN_AWS_ACCESS_KEY_ID}' >> $BASH_ENV
       echo 'export AWS_SECRET_ACCESS_KEY=${WEB_CDN_AWS_SECRET_ACCESS_KEY}' >> $BASH_ENV
 
-s3_deploy: &s3_deploy
-  aws-s3/sync:
-    from: dist
-    to: '${S3_URI}/libguides'
-    arguments: |
-      --delete
-    overwrite: true
+# Note that `aws s3 sync ... --exact-timestamps` only works for downloads from S3,
+# not uploads: https://github.com/aws/aws-cli/issues/4460.  The only safe way
+# to update is to upload absolutely everything using `cp` and then deleting
+# removed files using `sync --delete`.  There are many other open GitHub issues
+# related to this behavior.  Here's another: https://github.com/aws/aws-cli/issues/3273.
+aws-sync-s3: &aws-sync-s3
+  run:
+    name: Deploy to S3
+    command: |
+      aws s3 cp --recursive dist ${S3_URI}/libguides && \
+      aws s3 sync --delete dist ${S3_URI}/libguides
 
 webpack_build: &webpack_build
   run:
     name: Webpack
     command: |
-      NODE_ENV=${NODE_ENV} docker-compose run build
+      NODE_ENV=${NODE_ENV} docker compose run build
 
 webpack_copy: &webpack_copy
   run:
@@ -35,10 +39,9 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
   deploy-dev:
-    <<: *docker-defaults
+    <<: *machine-defaults
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Export Dev environment
           command: |
@@ -46,15 +49,14 @@ jobs:
       - *aws_env
       - *webpack_build
       - *webpack_copy
-      - *s3_deploy
+      - *aws-sync-s3
       - store_artifacts:
           path: dist
-    
+
   deploy-prod:
-    <<: *docker-defaults
+    <<: *machine-defaults
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Export Dev environment
           command: |
@@ -62,7 +64,7 @@ jobs:
       - *aws_env
       - *webpack_build
       - *webpack_copy
-      - *s3_deploy
+      - *aws-sync-s3
       - store_artifacts:
           path: dist
 

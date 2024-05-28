@@ -96,8 +96,8 @@ Even though these two pages need to be managed via different templates because o
 Using an nginx proxy we can develop our styles and JS locally in realtime. To bring up the local proxy do the following:
 
 ```
-docker-compose build
-docker-compose up dev
+docker compose build
+docker compose up dev
 # Visit localhost:8080
 ```
 
