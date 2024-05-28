@@ -22,7 +22,7 @@ webpack_build: &webpack_build
   run:
     name: Webpack
     command: |
-      NODE_ENV=${NODE_ENV} docker-compose run build
+      NODE_ENV=${NODE_ENV} docker compose run build
 
 webpack_copy: &webpack_copy
   run:
