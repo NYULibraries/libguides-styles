@@ -1,6 +1,6 @@
-docker-defaults: &docker-defaults
-  docker:
-    - image: quay.io/nyulibraries/circleci_docker:18.06.1-dc-1.23.2-0
+machine-defaults: &machine-defaults
+  machine:
+    image: ubuntu-2204:current
   working_directory: ~/app
 
 aws_env: &aws_env
@@ -35,10 +35,9 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
   deploy-dev:
-    <<: *docker-defaults
+    <<: *machine-defaults
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Export Dev environment
           command: |
@@ -49,12 +48,11 @@ jobs:
       - *s3_deploy
       - store_artifacts:
           path: dist
-    
+
   deploy-prod:
-    <<: *docker-defaults
+    <<: *machine-defaults
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Export Dev environment
           command: |
