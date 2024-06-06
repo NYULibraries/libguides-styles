@@ -19,7 +19,7 @@
 body {
   padding-left: 0;
   padding-right: 0;
-  font-family: $family_gotham;
+  font-family: $family_nyu_perstare;
   font-size: $font_size_base;
   color: $text_black;
 }
@@ -32,7 +32,7 @@ body {
 
 .heading {
   @include antialias;
-  font-family: $family_gotham;
+  font-family: $family_nyu_perstare;
 }
 
 h1,
@@ -43,7 +43,7 @@ h4 {
 }
 
 h1 {
-  font-family: $family_gotham_narrow;
+  font-family: $family_nyu_perstare;
   font-size: 36px;
   font-weight: $weight_light;
 
