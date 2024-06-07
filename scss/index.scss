@@ -45,7 +45,7 @@ h4 {
 h1 {
   font-family: $family_nyu_perstare;
   font-size: 36px;
-  font-weight: $weight_light;
+  font-weight: $weight_regular;
 
   @include max-width($bp_mobile_body) {
     font-size: 28px;
