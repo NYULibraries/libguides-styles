@@ -159,3 +159,11 @@ input[type='text'].s-lg-form-control {
 .alert-info {
   background-color: transparent;
 }
+
+/*
+  Hide "Librarian Review" content from public display on individual database pages
+*/
+.librarian-review-header,
+.librarian-review-header + .mt-2.mb-2 {
+    display: none;
+}
