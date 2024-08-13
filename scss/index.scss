@@ -16,10 +16,23 @@
 @import 'dialog';
 @import 'blog';
 
+/* 
+   Apply the NYUPerstare font universally across all elements within the body.
+   This rule uses !important to ensure that the NYUPerstare font takes precedence
+   over any other font-family styles, including those defined in lookfeel.css.
+   lookfeel.css is a vendor file that is currently overriding our fonts on a 
+   number of elements. By applying !important, we ensure consistent typography 
+   throughout the site, preventing any unintended font changes introduced by 
+   the vendor stylesheet. 
+*/
+body * {
+  font-family: $family_nyu_perstare !important;
+}
+
 body {
   padding-left: 0;
   padding-right: 0;
-  font-family: $family_nyu_perstare;
+  font-family: $family_nyu_perstare !important;
   font-size: $font_size_base;
   color: $text_black;
 }
