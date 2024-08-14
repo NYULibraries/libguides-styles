@@ -180,3 +180,8 @@ input[type='text'].s-lg-form-control {
 .librarian-review-header + .mt-2.mb-2 {
     display: none;
 }
+
+// Hide the "Additional Info" button on an individual database page
+button.collapsible.az-toggle {
+  visibility: hidden;
+}
