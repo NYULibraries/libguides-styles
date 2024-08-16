@@ -74,25 +74,28 @@ function loadNYUPerstareFonts() {
 
 loadNYUPerstareFonts();
 
-/* 
-    This script is designed to automatically unhide 'Additional Info' by default on an individual database 
-    webpage as soon as it is added to the DOM. The 'Additional Info' button is part of a collapsible
-    section that reveals more content when clicked. The script uses a MutationObserver
-    to detect when the button is inserted into the DOM. Once detected, it clicks the button to
-    expand the 'Additional Info' section, allowing users to see the extra content automatically.
-    After the button is clicked, the observer is disconnected to optimize performance.
+/*
+    This script is designed to automatically expand all 'Additional Info' sections as soon as they 
+    are added to the DOM. Each 'Additional Info' section is controlled by a collapsible button 
+    that toggles the visibility of additional content when clicked. The script leverages a MutationObserver 
+    to monitor the DOM for the insertion of these buttons. Once a button is detected, the script 
+    checks its state and clicks it if it is in the "collapsed" state (i.e., `aria-expanded` is set to 'false'), 
+    ensuring that the 'Additional Info' sections are expanded by default.
+    The script is capable of handling scenarios with one or multiple buttons. It selects all matching buttons 
+    within each newly added node and clicks each one that needs to be expanded.
 */
 (function() {
-    const script= document.createElement('script');
+    const script = document.createElement('script');
     script.type = 'text/javascript';
     script.innerHTML = `
     document.addEventListener('DOMContentLoaded', function() {
-        
-        function handleButtonClick(toggleButton) {
-            if (toggleButton && toggleButton.getAttribute('aria-expanded') === 'false') {
-                toggleButton.click();
-                observer.disconnect();
-            }
+
+        function handleButtonClick( toggleButtons ) {
+            toggleButtons.forEach(button => {
+                if (button.getAttribute('aria-expanded') === 'false') {
+                    button.click();
+                }
+            });
         }
 
         const callback = ( mutations, observer ) => {
@@ -101,10 +104,13 @@ loadNYUPerstareFonts();
                     for ( let i = 0; i < mutation.addedNodes.length; i++ ) {
                         let node = mutation.addedNodes[i];
                         if ( node.nodeType === 1 ) {
-                            let toggleButton = node.matches(buttonSelector) ? node : node.querySelector(buttonSelector);
+                            let toggleButtons = node.matches(buttonSelector) 
+                                ? [node] 
+                                : Array.from(node.querySelectorAll(buttonSelector));
 
-                            if ( toggleButton ) {
-                                handleButtonClick( toggleButton );
+                            if ( toggleButtons.length > 0) {
+                                handleButtonClick( toggleButtons );
+                                observer.disconnect();
                                 return;
                             }
                         }
