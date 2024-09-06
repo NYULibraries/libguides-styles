@@ -6,12 +6,6 @@ var info_style_change = function() {
 	$('.s-lg-label-more-info').hide();
 }
 
-// Page instrumented such that style changes occur when AZ content
-// is inserted onto the page:
-$(document).on('DOMNodeInserted', '#s-lg-az-content', function () {
-	info_style_change();
-});
-
 // This is inherited jQuery, it needs to be reviewed and possibly eliminated
 $(document).ready(function() {
 	//Changing By Owner to By Author
@@ -29,6 +23,20 @@ $(document).ready(function() {
 	}
 
 	info_style_change();
+
+    // Replacement for DOMNodeInserted using MutationObserver based on https://developer.chrome.com/blog/mutation-events-deprecation
+    const target = document.querySelector('#s-lg-az-content');
+    if (target) {
+        const observer = new MutationObserver(mutationList => {
+            mutationList.filter(m => m.type === 'childList').forEach(m => {
+                m.addedNodes.forEach(() => {
+                    info_style_change();
+                });
+            });
+        });
+
+        observer.observe(target, { childList: true, subtree: true });
+    }
 	// if(document.getElementById("s-lg-guide-search-terms")) {
 	// 	//Changing Placeholder of Guides Page Search Box
 	// 	document.getElementById("s-lg-guide-search-terms").setAttribute("placeholder","enter your search here");  
