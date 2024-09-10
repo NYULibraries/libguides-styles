@@ -24,10 +24,10 @@
    number of elements. By applying !important, we ensure consistent typography 
    throughout the site, preventing any unintended font changes introduced by 
    the vendor stylesheet. 
+
+   Important: Do not use 'body *' as it will override our icons that we use as font,
+   causing issues with font-based icons like Font Awesome or similar.
 */
-body * {
-  font-family: $family_nyu_perstare !important;
-}
 
 body {
   padding-left: 0;
@@ -37,6 +37,14 @@ body {
   color: $text_black;
 }
 
+body h1,
+body h2,
+body h3,
+body h4 {
+  @extend .heading;
+}
+
+
 @include max-width($bp_small_page_heading) {
   .container {
     margin: 0 1em;
@@ -45,15 +53,9 @@ body {
 
 .heading {
   @include antialias;
-  font-family: $family_nyu_perstare;
+  font-family: $family_nyu_perstare !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  @extend .heading;
-}
 
 h1 {
   font-family: $family_nyu_perstare;
