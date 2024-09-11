@@ -16,14 +16,14 @@
 @import 'dialog';
 @import 'blog';
 
-/* 
+/*
    Apply the NYUPerstare font universally across all elements within the body.
    This rule uses !important to ensure that the NYUPerstare font takes precedence
    over any other font-family styles, including those defined in lookfeel.css.
-   lookfeel.css is a vendor file that is currently overriding our fonts on a 
-   number of elements. By applying !important, we ensure consistent typography 
-   throughout the site, preventing any unintended font changes introduced by 
-   the vendor stylesheet. 
+   lookfeel.css is a vendor file that is currently overriding our fonts on a
+   number of elements. By applying !important, we ensure consistent typography
+   throughout the site, preventing any unintended font changes introduced by
+   the vendor stylesheet.
 
    Important: Do not use 'body *' as it will override our icons that we use as font,
    causing issues with font-based icons like Font Awesome or similar.
@@ -112,7 +112,7 @@ a {
   width: 100%;
 }
 
-//  Changing popover title size 
+//  Changing popover title size
 .s-lg-small,
 .s-lib-debug,
 .s-lib-small,
