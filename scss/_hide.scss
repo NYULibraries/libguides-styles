@@ -4,3 +4,8 @@
 #s-lc-new-reservation-checkout {
 	display: none !important;
 }
+
+// Hide the "Additional Info" button on the database pages
+button.collapsible.az-toggle {
+ display: none !important;
+}

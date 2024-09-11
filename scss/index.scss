@@ -183,7 +183,8 @@ input[type='text'].s-lg-form-control {
     display: none;
 }
 
-//// Hide the "Additional Info" button on an individual database page
-//button.collapsible.az-toggle {
-//  visibility: hidden;
-//}
+/* Show the collapsible 'More info' content by default */
+.az-entry-collapsible-box.collapse {
+  display: block !important;
+  margin-top: 5px;
+}
