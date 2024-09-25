@@ -16,18 +16,18 @@
 @import 'dialog';
 @import 'blog';
 
-/* 
+/*
    Apply the NYUPerstare font universally across all elements within the body.
    This rule uses !important to ensure that the NYUPerstare font takes precedence
    over any other font-family styles, including those defined in lookfeel.css.
-   lookfeel.css is a vendor file that is currently overriding our fonts on a 
-   number of elements. By applying !important, we ensure consistent typography 
-   throughout the site, preventing any unintended font changes introduced by 
-   the vendor stylesheet. 
+   lookfeel.css is a vendor file that is currently overriding our fonts on a
+   number of elements. By applying !important, we ensure consistent typography
+   throughout the site, preventing any unintended font changes introduced by
+   the vendor stylesheet.
+
+   Important: Do not use 'body *' as it will override our icons that we use as font,
+   causing issues with font-based icons like Font Awesome or similar.
 */
-//body * {
-//  font-family: $family_nyu_perstare !important;
-//}
 
 body {
   padding-left: 0;
@@ -37,6 +37,14 @@ body {
   color: $text_black;
 }
 
+body h1,
+body h2,
+body h3,
+body h4 {
+  @extend .heading;
+}
+
+
 @include max-width($bp_small_page_heading) {
   .container {
     margin: 0 1em;
@@ -45,15 +53,9 @@ body {
 
 .heading {
   @include antialias;
-  font-family: $family_nyu_perstare;
+  font-family: $family_nyu_perstare !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  @extend .heading;
-}
 
 h1 {
   font-family: $family_nyu_perstare;
@@ -110,7 +112,7 @@ a {
   width: 100%;
 }
 
-//  Changing popover title size 
+//  Changing popover title size
 .s-lg-small,
 .s-lib-debug,
 .s-lib-small,
@@ -181,7 +183,8 @@ input[type='text'].s-lg-form-control {
     display: none;
 }
 
-//// Hide the "Additional Info" button on an individual database page
-//button.collapsible.az-toggle {
-//  visibility: hidden;
-//}
+/* Show the collapsible 'More info' content by default */
+.az-entry-collapsible-box.collapse {
+  display: block !important;
+  margin-top: 5px;
+}
