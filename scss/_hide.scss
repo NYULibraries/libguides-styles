@@ -9,3 +9,11 @@
 button.collapsible.az-toggle {
  display: none !important;
 }
+
+//   Hide "Librarian Review" content from public display on individual database pages
+#s-lg-az-cols .col-md-12.center h2.mb-3:nth-of-type(2),
+#s-lg-az-cols .col-md-12.center h2.mb-3:nth-of-type(2) + .mt-2.mb-2 {
+    display: none;
+}
+
+
