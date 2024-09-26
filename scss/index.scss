@@ -175,14 +175,6 @@ input[type='text'].s-lg-form-control {
   background-color: transparent;
 }
 
-/*
-  Hide "Librarian Review" content from public display on individual database pages
-*/
-.librarian-review-header,
-.librarian-review-header + .mt-2.mb-2 {
-    display: none;
-}
-
 /* Show the collapsible 'More info' content by default */
 .az-entry-collapsible-box.collapse {
   display: block !important;
