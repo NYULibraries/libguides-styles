@@ -1,4 +1,5 @@
 const path = require('path');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isStaging = process.env.NODE_ENV === 'staging';
@@ -10,10 +11,16 @@ module.exports = {
       './js/index.js',
       './scss/index.scss',
     ],
+    // An "empty" bess.min.js file is created for this styles-only entry.
+    // We remove it using:
+    // https://github.com/fqborges/webpack-fix-style-only-entries
+    bess: [
+      './scss/bess.scss',
+    ],
     dataservices: [
       './js/dataservices.js',
       './scss/dataservices.scss',
-    ]
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -49,4 +56,8 @@ module.exports = {
       },
     ],
   },
+  plugins : [
+    // See comment for `entry.bess` above.
+    new FixStyleOnlyEntriesPlugin(),
+  ],
 };
