@@ -1,3 +1,5 @@
+@use 'colors' as *;
+@use 'variables' as *;
 
 #s-lg-profile-subjects button.btn-primary {
   background-color: $nyu_purple !important;

@@ -1,20 +1,20 @@
-@import 'reset';
-@import 'colors';
-@import 'variables';
-@import 'mixins';
-@import 'a11y';
-@import 'breadcrumbs';
-@import 'header';
-@import 'footer';
-@import 'hide';
-@import 'guide';
-@import 'profile';
-@import 'tabs';
-@import 'buttons';
-@import 'subject';
-@import 'arch';
-@import 'dialog';
-@import 'blog';
+@use 'a11y';
+@use 'arch';
+@use 'blog';
+@use 'breadcrumbs' as *;
+@use 'buttons';
+@use 'colors' as *;
+@use 'dialog';
+@use 'footer';
+@use 'guide';
+@use 'header';
+@use 'hide';
+@use 'mixins' as *;
+@use 'profile';
+@use 'reset';
+@use 'subject';
+@use 'tabs';
+@use 'variables' as *;
 
 /*
    Apply the NYUPerstare font universally across all elements within the body.

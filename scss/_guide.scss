@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
 // Guide name
 #s-lg-guide-header-info h1, .s-lib-header h1, #s-lg-guide-name {
   font-family: $family_nyu_perstare;
