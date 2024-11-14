@@ -17,7 +17,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].min.js'
+    filename: '[name].min.js',
+    clean: true,
   },
   devtool: isProduction || isStaging ? 'source-map' : 'eval-source-map',
   module: {
@@ -25,7 +26,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: 'babel-loader',
       },
       {
         test: /\.scss$/,
@@ -36,17 +37,20 @@ module.exports = {
               name: '[name].min.css',
             }
           },
+          'extract-loader',
+          'css-loader',
           {
-            loader: 'extract-loader'
-          },
-          {
-            loader: 'css-loader?-url'
-          },
-          {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                quietDeps: true,
+              },
+            }
           }
         ]
       },
     ],
   },
+  watch: true,
 };
