@@ -183,6 +183,7 @@ input[type='text'].s-lg-form-control {
 
 /* Add always visible underline for links in LibGuides for accessibility */
 .s-lib-box-content a,
+#s-lib-public-main a,
 #s-lg-az-content a,
 #s-lg-az-trials-div a,
 #s-lg-az-popular-div a {
@@ -192,6 +193,7 @@ input[type='text'].s-lg-form-control {
 }
 
 .s-lib-box-content a:hover,
+#s-lib-public-main a:hover,
 #s-lg-az-content a:hover,
 #s-lg-az-trials-div a:hover,
 #s-lg-az-popular-div a:hover {
