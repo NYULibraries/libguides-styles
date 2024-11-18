@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'variables' as *;
+
 // Buttons
 button,
 .btn,
@@ -14,21 +17,21 @@ form button,
 form .btn,
 form .btn-info,
 .s-lg-hp-btn-section {
+  border-color: $nyu_purple;
   // These chained pseudo-classes all have to be overridden , oy
   &, &:hover, &:hover:active, &:active, &:focus, &:active:focus {
     background-color: $nyu_purple;
     color: white;
     border-color: $nyu_purple;
   }
-  border-color: $nyu_purple;
 }
 
 .s-lg-index-nav-btn button.btn {
-  background-color: none !important; 
+  background-color: none !important;
 }
 
-.input-group-sm > .form-control, 
-.input-group-sm > .input-group-addon, 
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   font-size: $font_size_base;
   height: auto;
