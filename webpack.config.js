@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isStaging = process.env.NODE_ENV === 'staging';
@@ -31,13 +32,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].min.css',
-            }
-          },
-          'extract-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'sass-loader',
@@ -52,4 +47,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].min.css',
+    }),
+  ],
 };
