@@ -16,4 +16,7 @@ button.collapsible.az-toggle {
     display: none;
 }
 
-
+// Hide external link icons on Databases A-Z page only
+.az-layout i.fa-external-link {
+  display: none;
+}
