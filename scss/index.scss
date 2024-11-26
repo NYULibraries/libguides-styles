@@ -29,6 +29,17 @@
    causing issues with font-based icons like Font Awesome or similar.
 */
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.s-lib-main.container {
+  flex: 1;
+}
+
 body {
   padding-left: 0;
   padding-right: 0;
