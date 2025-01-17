@@ -35,8 +35,6 @@ webpack_copy: &webpack_copy
       docker cp $(docker ps -a -q --filter name=build):/app/dist/ .
 
 version: 2.1
-orbs:
-  aws-s3: circleci/aws-s3@1.0.11
 jobs:
   deploy-dev:
     <<: *machine-defaults
