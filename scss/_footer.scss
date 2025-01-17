@@ -5,60 +5,293 @@
 // Comment out the background-color for the footer containers 
 // until we standardize all pages on a single template
 
+/* Hide the vendor's footer */
 .system-footer-container {
-  // background: $text_black;
+  display: none !important;
 }
 
-.s-lib-public-body .public-footer-container {
-  // background-color: $text_black;
+/* library.nyu.edu Footer styles */
+
+#footer {
+  width: 100%;
+  display: block;
+}
+
+#footer > img {
+  height: 27px;
+}
+
+ul.list {
+  list-style: none;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  border-bottom: 1px dotted #bbbdbf;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+}
+
+.list:last-child li:last-child{
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+label {
+  color: #656C72;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+.ss-icon, .table__cell--sortable[data-sort]:after, [class^="ss-"]:before, [class*=" ss-"]:before, [class^="ss-"].right:after, [class*=" ss-"].right:after, .ss-icon.ss-nyu-libraries, .ss-nyu-libraries.table__cell--sortable[data-sort]:after, [class^="ss-"].ss-nyu-libraries:before, [class*=" ss-"].ss-nyu-libraries:before, [class^="ss-"].ss-nyu-libraries.right:after, [class*=" ss-"].ss-nyu-libraries.right:after {
+  font-weight: normal;
+  font-family: "SS NYULibraries";
+}
+
+.primary-footer{
+  background: #22272d;
+  color: #acb6c2;
+  padding: 45px 0;
+  
+  
+
+  .list li{
+    border-bottom-color: #65686c;
+  }
+
+  .block{
+    margin-bottom: 30px;
+  }
+
+  a{
+    color: #acb6c2;
+
+    &:hover{
+      color: #d8dee5;
+      text-decoration: underline;
+    }
+  }
+
+  .button{
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .primary-footer {
+    padding-bottom: 72px;
+  }
+
+  .s-lib-main {
+    padding-top: 0;
+    padding-bottom: 0;
+ }
+}
+
+
+.primary-footer a:hover {
+  color: #d8dee5;
+  text-decoration: underline;
+}
+
+.primary-footer .button:hover {
+  background: #6c07ae;
+}
+
+.wrap{
+  height: 90%;
+  width: 95%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+.block-container {
+  height: 100%;
+  zoom: 1;
+  display: block;
+  @include clearfix;
+
+  &.is-bordered{
+  border-top: 3px solid #22272d;
+  padding-top: 45px;
+  }
+}
+
+.block {
+  margin: 0 0 45px;
+}
+
+.primary-footer .block {
+  margin-bottom: 30px;
+}
+
+.block--25 {
+  width: 25%;
+  float: left;
+  padding: 0 15px;
+}
+
+.block--25:first-child {
+  padding-left: 0;
+}
+
+block--25:nth-of-type(4n) {
+  padding-right: 0;
+}
+
+@include max-width(730px){
+  .footer__give, .footer__social{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.footer__search {
+  position: relative;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+input.footer__search__field {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  box-shadow: none;
+  padding: 15px 40px 15px 10px;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 3px;
+  width: 100%;
+  height: auto;
+  appearance: none;
+}
+
+input.footer__search__button {
+  color: #fff;
+}
+
+input.footer__search__button {
+  color: #fff;
+  @include appearance(none);
+  background: none;
+  font-size: 18px;
+  font-family: "SS NYULibraries";
   text-align: center;
+  padding: 0 13px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  border:none;
+
+  &:hover, &:focus{
+    background: #fff;
+    color: #57068c;
+    text-decoration: none;
+  }
 }
 
-.s-lib-public-body #s-lib-footer-public,
-.s-lib-footer,
-#s-lib-footer-public {
-  border-top: none;
-  margin: 0 auto;
-  font-size: 100%;
-  background-color: $text_black;
-  color: $text_footer_gray;
-  padding: 45px 0 0 0;
+input.footer__search__button:hover, input.footer__search__button:focus {
+  background: #fff;;
+  color: #57068c;
+  text-decoration: none !important;
 }
 
-.s-lib-public-body #s-lib-footer-public,
-.s-lib-footer,
-#s-lib-footer-public,
-#s-lib-footer-login-link, 
-#s-lib-footer-support-link,
-.public-footer-container {
-  a {
-    color: $text_footer_dark_gray;
-    text-decoration: underline;
-    &:hover {
-      color: $text_footer_white;
+input.footer__search__field::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.primary-footer .button {
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  padding: 25px 20px;
+  appearance: none;
+  border: 0 none;
+  box-shadow: none;
+  background: #57068c;
+  font-weight: 400;
+  font-family: "NYUPerstare", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+@include max-width(500px){
+  .footer__menu{
+    .list:last-child li:last-child{
+      border-bottom: 1px dotted #65686c;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    &:nth-child(2){
+      margin-bottom: 0;
     }
   }
 }
 
-.footer, .system-footer-container, .public-footer-container {
-  .s-lg-text-greyout {
-    color: $text_footer_gray;
-  }
+.footer__social p {
+  margin: 0 0 1em;
+  line-height: 1.5;
+  font-size: 12px;
 }
 
-.bold, .s-lg-bold, .s-lg-book-title {
-  font-size: 100%;
+.footer__social p a, .footer__social p .block .s-la-widget a, .block .s-la-widget .footer__social p a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.public-footer-container {
-  margin: 0 auto;
-  & > div.container {
-    background-color: $text_black;
-    padding: 10px 0 45px 15px;
-  }
-  @include max-width($bp_small_page_heading){
-    .container {
-      margin: 0 auto;
-    }
-  }
+.footer__social .ss-icon, .footer__social .table__cell--sortable[data-sort]:after {
+  color: #d8dee5;
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  border-top: 1px dotted #65686c;
+  padding-top: 30px;
+  color: #b1b1b1;
+  line-height: 1.4;
+}
+
+.footer__copyright a, .footer__copyright .block .s-la-widget a, .block .s-la-widget .footer__copyright a {
+  color: #b1b1b1;
+  text-decoration: underline;
+}
+
+.footer__logo {
+  float: right;
+  position: relative;
+  top: -7px;
+}
+
+.footer__logo:hover {
+  opacity: 0.8;
 }
