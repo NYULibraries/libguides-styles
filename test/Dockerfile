@@ -1,4 +1,4 @@
-FROM quay.io/nyulibraries/nginx:1.17.3-0-pre
+FROM nginxinc/nginx-unprivileged:1.27.5-alpine
 
 # Custom config files
 COPY --chown=nginx:nginx nginx/default.conf /etc/nginx/conf.d/default.conf
