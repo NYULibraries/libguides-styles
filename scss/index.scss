@@ -1,6 +1,7 @@
 @use 'a11y';
 @use 'arch';
 @use 'blog';
+@use 'bootstrap5' as bootstrap5;
 @use 'breadcrumbs' as *;
 @use 'buttons';
 @use 'colors' as *;
@@ -200,4 +201,4 @@ input[type='text'].s-lg-form-control {
   border-bottom: solid 1px $text_blue;
 }
 
-
+@include bootstrap5.styles;
