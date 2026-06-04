@@ -51,6 +51,10 @@ if (isBootstrap5Preview) {
 	document.documentElement.classList.add("s-lg-bs5-preview");
 }
 
+// Springshare's BS5 preview pages can still render tab controls with the BS3
+// `data-toggle="tab"` attribute. Bootstrap 5 listens for `data-bs-toggle`,
+// so add the BS5 attribute only on preview pages to keep those tabs working
+// without changing current BS3 guide behavior.
 function syncBootstrap5TabAttributes() {
 	document.querySelectorAll('[data-toggle="tab"]').forEach(function(tab) {
 		if (!tab.hasAttribute("data-bs-toggle")) {
@@ -139,4 +143,3 @@ function loadNYUPerstareFonts() {
 }
 
 loadNYUPerstareFonts();
-
