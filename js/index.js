@@ -48,7 +48,7 @@ function getQueryParameterValue(name) {
 const isBootstrap5Preview = getQueryParameterValue("bs5") === "1";
 
 if (isBootstrap5Preview) {
-	document.documentElement.classList.add("s-lg-bs5-preview");
+	document.documentElement.classList.add("nyu-libguides-bs5-preview");
 }
 
 // Springshare-rendered subject detail pages, for example
@@ -68,7 +68,7 @@ function syncBootstrap5TabAttributes() {
 // This is inherited jQuery, it needs to be reviewed and possibly eliminated
 $(document).ready(function() {
 	if (isBootstrap5Preview) {
-		document.body.classList.add("s-lg-bs5-preview");
+		document.body.classList.add("nyu-libguides-bs5-preview");
 		syncBootstrap5TabAttributes();
 	}
 
