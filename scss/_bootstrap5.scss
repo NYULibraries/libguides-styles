@@ -155,6 +155,10 @@
     border-bottom: 1px solid $border_solid_gray;
   }
 
+  html.nyu-libguides-bs5-preview #s-lg-tabs-container .dropdown-item.active {
+    background-color: transparent;
+  }
+
   html.nyu-libguides-bs5-preview #s-lg-sb-count.badge,
   html.nyu-libguides-bs5-preview #s-lg-sb-count.bg-secondary {
     background-color: $text_black !important;
