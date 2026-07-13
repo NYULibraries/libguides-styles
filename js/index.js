@@ -54,9 +54,10 @@ if (isBootstrap5Preview) {
 // Springshare-rendered subject detail pages, for example
 // `/subject_africana?bs5=1` and `/subject_business?bs5=1`, still output the
 // Guides / Preferred Databases tabs with the BS3 `data-toggle="tab"` attribute.
-// Bootstrap 5 listens for `data-bs-toggle`, so add the BS5 attribute only
-// on preview pages to bridge that markup mismatch without changing current
-// BS3 guide behavior.
+// Bootstrap 5 listens for `data-bs-toggle`, so add the BS5 attribute to
+// bridge that markup mismatch. This runs on all pages: it is required after
+// the BS5 cutover (no ?bs5=1) and is a harmless no-op under BS3, which
+// ignores the attribute.
 function syncBootstrap5TabAttributes() {
 	document.querySelectorAll('[data-toggle="tab"]').forEach(function(tab) {
 		if (!tab.hasAttribute("data-bs-toggle")) {
@@ -69,8 +70,9 @@ function syncBootstrap5TabAttributes() {
 $(document).ready(function() {
 	if (isBootstrap5Preview) {
 		document.body.classList.add("nyu-libguides-bs5-preview");
-		syncBootstrap5TabAttributes();
 	}
+
+	syncBootstrap5TabAttributes();
 
 	//Changing By Owner to By Author
 	// $('#s-lg-index-owner-btn').find('a').html("BY AUTHOR");
