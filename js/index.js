@@ -6,58 +6,10 @@ var info_style_change = function() {
 	$('.s-lg-label-more-info').hide();
 }
 
-// The BS5 preview gate must be exact because non-bs5 pages share this bundle.
-// A regex would be smaller, but it would make query parsing rules implicit in
-// the pattern. URLSearchParams would express the intent best, but this legacy
-// build target adds extra core-js polyfill code for it. This helper is the
-// middle ground: parse actual query parameters explicitly while keeping the
-// preview-only gate lightweight.
-function decodeQueryValue(value) {
-	try {
-		return decodeURIComponent(value.split("+").join(" "));
-	} catch (error) {
-		return value;
-	}
-}
-
-function getQueryParameterValue(name) {
-	const queryString = window.location.search.charAt(0) === "?"
-		? window.location.search.slice(1)
-		: window.location.search;
-
-	if (!queryString) {
-		return null;
-	}
-
-	const parameters = queryString.split("&");
-
-	for (let index = 0; index < parameters.length; index += 1) {
-		const parameter = parameters[index];
-		const separatorIndex = parameter.indexOf("=");
-		const parameterName = separatorIndex === -1 ? parameter : parameter.slice(0, separatorIndex);
-		const parameterValue = separatorIndex === -1 ? "" : parameter.slice(separatorIndex + 1);
-
-		if (decodeQueryValue(parameterName) === name) {
-			return decodeQueryValue(parameterValue);
-		}
-	}
-
-	return null;
-}
-
-const isBootstrap5Preview = getQueryParameterValue("bs5") === "1";
-
-if (isBootstrap5Preview) {
-	document.documentElement.classList.add("nyu-libguides-bs5-preview");
-}
-
-// Springshare-rendered subject detail pages, for example
-// `/subject_africana?bs5=1` and `/subject_business?bs5=1`, still output the
-// Guides / Preferred Databases tabs with the BS3 `data-toggle="tab"` attribute.
-// Bootstrap 5 listens for `data-bs-toggle`, so add the BS5 attribute to
-// bridge that markup mismatch. This runs on all pages: it is required after
-// the BS5 cutover (no ?bs5=1) and is a harmless no-op under BS3, which
-// ignores the attribute.
+// SpringShare subject detail pages (e.g. /subject_africana) still output the
+// Guides / Preferred Databases tabs with the legacy `data-toggle="tab"`
+// attribute. Bootstrap 5 listens for `data-bs-toggle`, so add it to bridge
+// the markup mismatch.
 function syncBootstrap5TabAttributes() {
 	document.querySelectorAll('[data-toggle="tab"]').forEach(function(tab) {
 		if (!tab.hasAttribute("data-bs-toggle")) {
@@ -68,10 +20,6 @@ function syncBootstrap5TabAttributes() {
 
 // This is inherited jQuery, it needs to be reviewed and possibly eliminated
 $(document).ready(function() {
-	if (isBootstrap5Preview) {
-		document.body.classList.add("nyu-libguides-bs5-preview");
-	}
-
 	syncBootstrap5TabAttributes();
 
 	//Changing By Owner to By Author
