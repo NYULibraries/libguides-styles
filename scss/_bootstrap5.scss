@@ -165,16 +165,24 @@
     color: #fff;
   }
 
-  html #s-lg-index-list-subjects a {
+  html #s-lg-index-list-subjects a,
+  html #s-lg-index-list-groups a,
+  html #s-lg-index-list-types a {
     @include nyu-link;
   }
 
   html #s-lg-index-list-subjects a:hover,
-  html #s-lg-index-list-subjects a:focus {
+  html #s-lg-index-list-subjects a:focus,
+  html #s-lg-index-list-groups a:hover,
+  html #s-lg-index-list-groups a:focus,
+  html #s-lg-index-list-types a:hover,
+  html #s-lg-index-list-types a:focus {
     @include nyu-link-hover;
   }
 
-  html #s-lg-index-list-subjects .accordion-button {
+  html #s-lg-index-list-subjects .accordion-button,
+  html #s-lg-index-list-groups .accordion-button,
+  html #s-lg-index-list-types .accordion-button {
     background-color: #f5f5f5;
     border-bottom: 0;
     color: $text_black;
@@ -185,7 +193,11 @@
   }
 
   html #s-lg-index-list-subjects .accordion-button:hover,
-  html #s-lg-index-list-subjects .accordion-button:focus {
+  html #s-lg-index-list-subjects .accordion-button:focus,
+  html #s-lg-index-list-groups .accordion-button:hover,
+  html #s-lg-index-list-groups .accordion-button:focus,
+  html #s-lg-index-list-types .accordion-button:hover,
+  html #s-lg-index-list-types .accordion-button:focus {
     background-color: #f5f5f5;
     border-bottom: 0;
     color: $text_black;
@@ -193,24 +205,34 @@
   }
 
   html #s-lg-index-list-subjects .accordion-button:focus,
-  html #s-lg-index-list-subjects .accordion-button:focus-visible {
+  html #s-lg-index-list-subjects .accordion-button:focus-visible,
+  html #s-lg-index-list-groups .accordion-button:focus,
+  html #s-lg-index-list-groups .accordion-button:focus-visible,
+  html #s-lg-index-list-types .accordion-button:focus,
+  html #s-lg-index-list-types .accordion-button:focus-visible {
     -webkit-box-shadow: inset 0 0 0 2px $border_focus !important;
     box-shadow: inset 0 0 0 2px $border_focus !important;
     outline: 0 !important;
   }
 
-  html #s-lg-index-list-subjects .accordion-button .bold {
+  html #s-lg-index-list-subjects .accordion-button .bold,
+  html #s-lg-index-list-groups .accordion-button .bold,
+  html #s-lg-index-list-types .accordion-button .bold {
     @include nyu-link;
     cursor: pointer;
     display: inline-block;
     order: 1;
   }
 
-  html #s-lg-index-list-subjects .accordion-button .bold:hover {
+  html #s-lg-index-list-subjects .accordion-button .bold:hover,
+  html #s-lg-index-list-groups .accordion-button .bold:hover,
+  html #s-lg-index-list-types .accordion-button .bold:hover {
     @include nyu-link-hover;
   }
 
-  html #s-lg-index-list-subjects .accordion-button .badge.pull-right {
+  html #s-lg-index-list-subjects .accordion-button .badge.pull-right,
+  html #s-lg-index-list-groups .accordion-button .badge.pull-right,
+  html #s-lg-index-list-types .accordion-button .badge.pull-right {
     border-radius: 10px;
     border-bottom: solid 1px transparent;
     cursor: pointer;
@@ -228,17 +250,23 @@
     white-space: nowrap;
   }
 
-  html #s-lg-index-list-subjects .accordion-button .badge.pull-right:hover {
+  html #s-lg-index-list-subjects .accordion-button .badge.pull-right:hover,
+  html #s-lg-index-list-groups .accordion-button .badge.pull-right:hover,
+  html #s-lg-index-list-types .accordion-button .badge.pull-right:hover {
     border-bottom: solid 1px $text_blue;
   }
 
-  html #s-lg-index-list-subjects .accordion-button::after {
+  html #s-lg-index-list-subjects .accordion-button::after,
+  html #s-lg-index-list-groups .accordion-button::after,
+  html #s-lg-index-list-types .accordion-button::after {
     margin-left: 0.5rem;
     order: 3;
   }
 
   html #s-lg-index-list .badge,
-  html #s-lg-index-list-subjects .badge {
+  html #s-lg-index-list-subjects .badge,
+  html #s-lg-index-list-groups .badge,
+  html #s-lg-index-list-types .badge {
     background-color: $text_black !important;
     color: #fff;
   }
