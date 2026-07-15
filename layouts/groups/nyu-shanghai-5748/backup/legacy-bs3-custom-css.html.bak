@@ -1,0 +1,20 @@
+<!--
+  NYU Shanghai (group ID 5748) Custom CSS as it existed before 2026-07-14.
+  Retired: the fixed height: 69px made the group banner image overlap the
+  breadcrumbs after the Bootstrap 5 cutover, and the S3 background-image URL
+  returns 403 (bucket locked down by Springshare; assets moved to CloudFront).
+  Kept for rollback reference only — do not re-apply as-is.
+-->
+<style>
+header
+ {
+   background-image: url('https://s3.amazonaws.com/libapps/customers/862/images/shanghai_logo.png');
+   background-position: 21px 21px;
+   background-repeat: no-repeat;
+   background-color: #57068c;
+   height: 69px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-bottom: 1px solid #653d24;
+}
+</style>
