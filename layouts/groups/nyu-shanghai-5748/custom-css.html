@@ -1,0 +1,22 @@
+<!--
+  Version-controlled copy of the NYU Shanghai group's Custom CSS.
+  Live code is managed in the LibGuides admin interface:
+  Admin > Groups > NYU Shanghai (group ID 5748) > Look & Feel > Custom JS/CSS
+  If you change it there, update this file too (and vice versa).
+  Previous (retired) version: backup/legacy-bs3-custom-css.html.bak
+-->
+<style>
+/*
+  NYU Shanghai group header (group 5748)
+  2026-07-14: Removed legacy Bootstrap 3-era rules — fixed height: 69px and a
+  dead S3 background-image — which made the banner image overlap the
+  breadcrumbs after the Bootstrap 5 cutover. LibGuides' BS5 CSS scales the
+  group banner img to full container width (~93px tall on desktop), so the
+  header must be free to grow with it. Do not re-add a fixed height.
+  background-color stays so the band is full-width purple beyond the
+  centered banner image.
+*/
+header {
+   background-color: #57068c;
+}
+</style>

@@ -35,6 +35,7 @@ LibGuides allows for the customization of a number of types of pages and our `la
   - `individual-profile` - a person in the system's profile page, e.g. https://guides.nyu.edu/prf.php?account_id=24837
   - `landing-page` - https://guides.nyu.edu/prf.php
 - `az` - the A-Z database list, e.g. https://guides.nyu.edu/az.php
+- `groups` - copies of group-level Look & Feel code (e.g. Custom CSS) managed in `Admin > Groups > {Group} > Look & Feel`, one directory per group, e.g. `groups/nyu-shanghai-5748`
 
 Within these folders there will be a directory and an index file and potentially other filenames:
 
