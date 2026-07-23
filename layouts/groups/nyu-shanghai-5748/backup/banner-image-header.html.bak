@@ -1,0 +1,15 @@
+<!--
+  NYU Shanghai (group ID 5748) header as rendered before 2026-07-23.
+  This was not hand-authored HTML: it came from the group's Banner Image
+  setting (Admin > Groups > NYU Shanghai > Look & Feel), which LibGuides
+  rendered as the markup below. Retired in favor of Header HTML using the CDN
+  logo so the header matches the NYU Libraries header height and alignment.
+  To roll back: clear the group Header HTML, uncheck "Exclude system level
+  Header code.", and re-select the banner image (still hosted at the
+  CloudFront URL below).
+-->
+<header>
+    <div class="container header-image">
+    <a href="https://library.nyu.edu/"><img src="//d2jv02qf7xgjwx.cloudfront.net/sites/873/groups/5748/banner/Shanghai_logo.png" alt=""/></a>
+</div>
+</header>
