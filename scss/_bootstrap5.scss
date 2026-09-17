@@ -323,6 +323,21 @@
     display: block;
   }
 
+  html #s-lg-page-prevnext .page-link {
+    background-color: $nyu_light_purple;
+    border-color: transparent;
+    border-radius: 4px;
+    color: $text_black;
+    font-weight: $weight_bold;
+  }
+
+  html #s-lg-page-prevnext .page-link:hover,
+  html #s-lg-page-prevnext .page-link:focus,
+  html #s-lg-page-prevnext .page-link:active {
+    background-color: $nyu_purple;
+    color: #fff;
+  }
+
   html #s-lib-public-main .pagination .page-link {
     background-color: #fff;
     border: 1px solid #ddd;
