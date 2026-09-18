@@ -397,4 +397,17 @@
     color: #333333;
     text-decoration: none;
   }
+
+  html .s-lib-box .s-lib-box-title-collapsible .s-lib-box-collapse-toggle {
+    background-color: #fff;
+    color: $text_blue;
+    font-family: $family_nyu_perstare;
+  }
+
+  html .s-lib-box .s-lib-box-title-collapsible .s-lib-box-collapse-toggle:hover,
+  html .s-lib-box .s-lib-box-title-collapsible .s-lib-box-collapse-toggle:focus {
+    background-color: #fff;
+    color: $text_blue;
+    text-decoration: underline;
+  }
 }
