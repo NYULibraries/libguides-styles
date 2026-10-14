@@ -1,3 +1,7 @@
+import { initMatomo } from './matomo';
+
+initMatomo();
+
 var info_style_change = function() {
 	$('.s-lg-content-more-info').each(function(index, value) { 
 		$(value).attr("style","display:block");

@@ -15,6 +15,12 @@ All custom styles for LibGuides start through the `scss/index.scss` entrypoint b
 
 All custom Javascript fo LibGuides start through the `js/index.js` entrypoint but can be split into multiple module files if necessary thanks to webpack.
 
+## Analytics
+
+Matomo (site 4) is loaded by `js/matomo.js`, which is part of `index.min.js`. It only tracks on `guides.nyu.edu`, so the local proxy sends no hits.
+
+Don't paste tracking code into the LibGuides admin. The `Admin > Look & Feel > Custom JS/CSS` box should only contain what is in `layouts/custom_js_css.html`: the favicon and the lines that load `index.min.css` and `index.min.js`.
+
 ## Layouts
 
 There is no way in LibGuides to host templates externally so we will just use this repository as a copy of the templating work we have to do directly in the LG interface. **We treat these version-controlled layouts as the canonical source even though they are not automatically synced up with the application, this means that at any time we can override the live version with the version managed here.**
